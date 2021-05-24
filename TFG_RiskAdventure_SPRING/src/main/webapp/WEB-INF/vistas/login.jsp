@@ -38,9 +38,9 @@
 			<div class="card-header">
 				<h3>Sign In</h3>
 				<div class="d-flex justify-content-end social_icon">
-				<span><a href="https://m.facebook.com/adventurerisk/"><i class="fab fa-facebook-square"></i></a></span>
-					<span><a href="https://cutt.ly/UvIKPOG"><i class="fab fa-whatsapp-square"></i></a></span>
-					<span><a href="https://twitter.com/adventurerisk"><i class="fab fa-twitter-square"></i></a></span>
+				<span><a href="https://m.facebook.com/adventurerisk/" target="_blank"><i class="fab fa-facebook-square"></i></a></span>
+					<span><a href="https://cutt.ly/UvIKPOG" target="_blank"><i class="fab fa-whatsapp-square"></i></a></span>
+					<span><a href="https://twitter.com/adventurerisk" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
           
 				</div>
 			</div>
@@ -69,7 +69,7 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					&iquest;A&uacute;n no tienes una cuenta?<a href="registro">Reg&iacute;strate</a>
+					&iquest;A&uacute;n no tienes una cuenta?<a href="registro" target="_blank">Reg&iacute;strate</a>
 				</div>
 				
 			</div>

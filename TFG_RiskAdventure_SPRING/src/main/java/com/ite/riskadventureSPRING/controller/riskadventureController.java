@@ -125,6 +125,15 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			return "ofertas";
 			
 		}
+		@GetMapping("/tipoOfertaDestacado")
+		public String ofertaDestacado(Model model,@RequestParam(name = "destacado") char destacado ) {
+			model.addAttribute("mensaje","Lidia Capita ");
+			List<Evento> listaEventoDestacado = evdao.verPorDestacado(destacado);
+			model.addAttribute("listaOfertaDestacado", listaEventoDestacado);
+			
+			return "ofertas";
+			
+		}
 		
 		@GetMapping("/aviso_legal")
 		public String inicio6(Model model) {

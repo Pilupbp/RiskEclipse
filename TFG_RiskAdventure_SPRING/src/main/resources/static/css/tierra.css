@@ -157,8 +157,20 @@ text-align: center;
 }
 
 /*Botones*/
+#div2_1 .ofertas{
+  padding: 4%;
+  background-color: #8091a5;  
+  text-align:center;
+  margin:auto;
+  font-size: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
+  
+  }
 
-#div2_1 div{
+#div2_1 .boton{
 padding: 1%;
 background-color: #8091a5;  
 margin-left: 4%;

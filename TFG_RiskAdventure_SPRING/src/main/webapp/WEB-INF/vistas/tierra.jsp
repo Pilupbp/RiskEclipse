@@ -29,7 +29,7 @@
         <header>
           <div class="row" id="icon">
               <div id="iconos" class="col-md-12 col-xs-12 ">
-                <a href="carrito"><i class="fa fa-shopping-cart" id="carrito" title="carrito"></i></a>
+                <a href="carrito"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
                 <a href="login"><i class="fas fa-user" id="login" title="login"></i></a>
                 <i class="fas fa-search" id="buscar" title="buscar"></i>
               </div>
@@ -115,23 +115,23 @@
 
         <article class="row">
             <div class="col-md-12 col-xs-12  " id="div2_1">
-              <a href="agua" id="consulta"><div>IR A AGUA</div></a>
-              <a href="ofertas"><div>OFERTAS</div></a>
-              <a href="aire"><div>IR A AIRE</div></a><br>
+              <a href="agua" id="consulta"><div class="boton">IR A AGUA</div></a>
+              <a href="ofertas"><div class="boton">OFERTAS</div></a>
+              <a href="aire"><div class="boton">IR A AIRE</div></a><br>
               
-              <a href="/riskadventure/tipoTierra?idExperiencia=1"><div>Ver empresas de Tierra</div></a>
+              <a href="/riskadventure/tipoTierra?idExperiencia=1"><div class="boton">Ver empresas de Tierra</div></a>
               <c:choose>
 	        <c:when test="${listaTipoTierra!=null && listaTipoTierra.size()!=0}">
 		        <table class="table table-striped table-hover" >
 		        	<th>Actividad</th><th>Empresa</th><th>Provincia</th><th>Teléfono</th><th>Contacto</th>
 		        	<c:forEach var="ele" items="${listaTipoTierra }">
 		        		<tr>
-		        			<td>${ele.nombreActividad}</td>
+		        			<td>${ele.nombreActividad}</td>      			
 		        			<td>${ele.nombreEmpresa}</td>
 		        			<td>${ele.nombreProvincia}</td>
 		        			<td>${ele.telefono}</td>
-		        			<td><div><a href="mailto:info@riskadventureclub.com">Consultar</a></div></td>
-		        			
+		        			<td><a href="mailto:info@riskadventureclub.com"><div class="ofertas">Consultar</div></a></td>
+
 		        		</tr>
 		        	</c:forEach>
 		        </table>
@@ -187,29 +187,30 @@
               </div>
               <div id="email">
                 <p class="texto_contacto">Email :</p>
+                
                 <p>info@riskadventureclub.com</p>
               </div>
               <div>
                 <p class="texto_contacto">Tel&eacute;fono :</p>
-                <p>(+34)677 899 900</p>
+                <p>(+34) 654 123 656 </p>
               </div>
             </div>
           <!-- Logos publicitarios-->  
           <div class="col-md-12 col-xs-12" id="publi">
-              <a href="https://eu.oneill.com/"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
-              <a href="https://www.columbia.com/"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
-              <a href="https://www.escapadarural.com/"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
-              <a href="https://www.lasportiva.com/es"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
-              <a href="https://www.decathlon.es/es/"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
-              <a href="http://www.bardis.com/"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
+              <a href="https://eu.oneill.com/" target="_blank"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
+              <a href="https://www.columbia.com/" target="_blank"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
+              <a href="https://www.escapadarural.com/" target="_blank"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
+              <a href="https://www.lasportiva.com/es" target="_blank"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
+              <a href="https://www.decathlon.es/es/" target="_blank"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
+              <a href="http://www.bardis.com/" target="_blank"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
           </div>
           <!-- iconos redes sociales y texto copyright-->
           <div class="col-md-12 col-xs-12" id="redes">
               <p>S&iacute;guenos en:</p>
-              <a href="https://m.facebook.com/adventurerisk/"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
-              <a href="https://www.instagram.com/riskadventure/"><i class="fab fa-instagram" title="instagram"></i></a>
-              <a href="https://cutt.ly/UvIKPOG"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
-              <a href="https://twitter.com/adventurerisk"><i class="fab fa-twitter" title="twitter"></i></a>
+              <a href="https://m.facebook.com/adventurerisk/" target="_blank"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
+              <a href="https://www.instagram.com/riskadventure/" target="_blank"><i class="fab fa-instagram" title="instagram"></i></a>
+              <a href="https://cutt.ly/UvIKPOG" target="_blank"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
+              <a href="https://twitter.com/adventurerisk" target="_blank"><i class="fab fa-twitter" title="twitter"></i></a>
               <p>2020 &copy; Copyright</p>
           </div>
           

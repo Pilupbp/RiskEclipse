@@ -158,23 +158,48 @@ text-align: center;
 
 }
 
-/*Botones*/
-#div2_1 div{
-padding: 1%;
-background-color: #8091a5;  
-margin-left: 4%;
-font-size: 130%;
-border-radius: 7px;
-font-weight: bolder;
-display: inline-block;
-color: white;
-margin-bottom: 4%;
-}
-#div2_1 div:hover{
-background-color: #ba9e38;
-
-}
-
+    /*Botones*/
+    #div2_1 div{
+    padding: 1%;
+    background-color: #8091a5;  
+    margin-left: 4%;
+    font-size: 130%;
+    border-radius: 7px;
+    font-weight: bolder;
+    display: inline-block;
+    color: white;
+    margin-bottom: 4%;
+    }
+    #div2_1 div:hover{
+    background-color: #ba9e38;
+    
+    }
+    
+    /*Botones Ofertas*/
+	#div2_1 .ofertas{
+	  padding: 4%;
+	  background-color: #8091a5;  
+	  text-align:center;
+	  margin:auto;
+	  font-size: 100%;
+	  border-radius: 4px;
+	  font-weight: bold;
+	  display: inline-block;
+	  color: white;
+	  
+	  }
+	
+	#div2_1 .boton{
+	padding: 1%;
+	background-color: #8091a5;  
+	margin-left: 4%;
+	font-size: 130%;
+	border-radius: 7px;
+	font-weight: bolder;
+	display: inline-block;
+	color: white;
+	margin-bottom: 4%;
+	}
 
 .bola {
 background-color: #ba9e38;

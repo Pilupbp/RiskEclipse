@@ -31,7 +31,7 @@
         <header>
           <div class="row" id="icon">
               <div id="iconos" class="col-md-12 col-xs-12 ">
-                <a href="carrito"><i class="fa fa-shopping-cart" id="carrito" title="carrito"></i></a>
+                <a href="carrito"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
                 <a href="login"><i class="fas fa-user" id="login" title="login"></i></a>
                 <i class="fas fa-search" id="buscar" title="buscar"></i>
               </div>
@@ -108,8 +108,28 @@
 
         <article class="row">
             <div class="col-md-12 col-xs-12  " id="div2_1">
-              <a href="ofertas"><div>OFERTAS</div></a>
-              <a href="contacto"><div>PRESUPUESTO A MEDIDA</div></a>  <br>                           
+              <a href="/riskadventure/tipoOfertaDestacado?destacado=s"><div class="boton">MOSTRAR OFERTAS PACKS & GRUPOS</div></a>
+              <a href="mailto:info@riskadventureclub.com"><div>PRESUPUESTO A MEDIDA</div></a>  <br>  
+              
+              <c:choose>
+	        	<c:when test="${listaOfertaDestacado!=null && listaOfertaDestacado.size()!=0}">
+			        <table class="table table-striped table-hover" style="text-align:'center'">
+			        	<th>Nombre</th><th>Descripción</th><th>Fecha Inicio</th><th>Duración</th><th>Precio</th><th>Detalle</th><th>Reservar</th>
+			        	<c:forEach var="ele" items="${listaOfertaDestacado }">
+			        		<tr>
+			        			<td>${ele.nombre}</td>
+			        			<td>${ele.descripcion}</td>
+			        			<td><fmt:formatDate value ="${ele.fechaInicio}"></fmt:formatDate></td>
+			        			<td>${ele.duracion}</td>
+			        			<td>${ele.precio}</td>
+			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas" >Detalle</div></a></td>
+			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas">Reservar</div></a></td>
+			        			
+			        		</tr>
+			        	</c:forEach>
+			        </table>
+	        	</c:when>
+       		</c:choose>                         
             </div>            
         </article>
         
@@ -213,27 +233,27 @@
                 <div class="grid-container">
                     <article id="3685" class="location-listing">
                         <div class="location-image" id="lasportiva">
-                            <a href="https://www.lasportiva.com/es"><img width="320" height="169" src="../imagenes/la_sportiva.jpg"  alt="La Sportiva"> </a>
+                            <a href="https://www.lasportiva.com/es" target="_blank"><img width="320" height="169" src="../imagenes/la_sportiva.jpg"  alt="La Sportiva"> </a>
                         </div>
                     </article>
                     <article id="3688" class="location-listing">
                         <div class="location-image" id="salomon">
-                            <a href="https://www.salomon.com/es-es"><img width="300" height="169" src="../imagenes/salomon.jpg" alt="Salomon"> </a>
+                            <a href="https://www.salomon.com/es-es" target="_blank"><img width="300" height="169" src="../imagenes/salomon.jpg" alt="Salomon"> </a>
                         </div>
                     </article>
                     <article id="3691" class="location-listing">
                         <div class="location-image" id="columbia">
-                            <a href="https://www.columbiasportswear.es/"><img width="300" height="169" src="../imagenes/columbia_packs.png" alt="Columbia"> </a>
+                            <a href="https://www.columbiasportswear.es/" target="_blank"><img width="300" height="169" src="../imagenes/columbia_packs.png" alt="Columbia"> </a>
                         </div>
                     </article>
                      <article class="location-listing">
                         <div class="location-image" id="merrel">
-                            <a href="https://www.merrell.com/ES/es_ES/home"><img width="300" height="169" src="../imagenes/merrell.svg" alt="Merrell"> </a>
+                            <a href="https://www.merrell.com/ES/es_ES/home" target="_blank"><img width="300" height="169" src="../imagenes/merrell.svg" alt="Merrell"> </a>
                         </div>
                     </article>
                     <article class="location-listing">
                         <div class="location-image" id="north">
-                            <a href="https://www.thenorthface.es"><img width="300" height="169" src="../imagenes/thenorthface.jpg" alt="North_Face"> </a>
+                            <a href="https://www.thenorthface.es" target="_blank"><img width="300" height="169" src="../imagenes/thenorthface.jpg" alt="North_Face"> </a>
                         </div>
                     </article>
                 </div>
@@ -314,29 +334,30 @@
               </div>
               <div id="email">
                 <p class="texto_contacto">Email :</p>
+                
                 <p>info@riskadventureclub.com</p>
               </div>
               <div>
                 <p class="texto_contacto">Tel&eacute;fono :</p>
-                <p>(+34)677 899 900</p>
+                <p>(+34) 654 123 656 </p>
               </div>
             </div>
           <!-- Logos publicitarios-->  
           <div class="col-md-12 col-xs-12" id="publi">
-              <a href="https://eu.oneill.com/"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
-              <a href="https://www.columbia.com/"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
-              <a href="https://www.escapadarural.com/"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
-              <a href="https://www.lasportiva.com/es"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
-              <a href="https://www.decathlon.es/es/"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
-              <a href="http://www.bardis.com/"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
+              <a href="https://eu.oneill.com/" target="_blank"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
+              <a href="https://www.columbia.com/" target="_blank"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
+              <a href="https://www.escapadarural.com/" target="_blank"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
+              <a href="https://www.lasportiva.com/es" target="_blank"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
+              <a href="https://www.decathlon.es/es/" target="_blank"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
+              <a href="http://www.bardis.com/" target="_blank"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
           </div>
           <!-- iconos redes sociales y texto copyright-->
           <div class="col-md-12 col-xs-12" id="redes">
               <p>S&iacute;guenos en:</p>
-              <a href="https://m.facebook.com/adventurerisk/"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
-              <a href="https://www.instagram.com/riskadventure/"><i class="fab fa-instagram" title="instagram"></i></a>
-              <a href="https://cutt.ly/UvIKPOG"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
-              <a href="https://twitter.com/adventurerisk"><i class="fab fa-twitter" title="twitter"></i></a>
+              <a href="https://m.facebook.com/adventurerisk/" target="_blank"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
+              <a href="https://www.instagram.com/riskadventure/" target="_blank"><i class="fab fa-instagram" title="instagram"></i></a>
+              <a href="https://cutt.ly/UvIKPOG" target="_blank"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
+              <a href="https://twitter.com/adventurerisk" target="_blank"><i class="fab fa-twitter" title="twitter"></i></a>
               <p>2020 &copy; Copyright</p>
           </div>
           

@@ -87,7 +87,7 @@ public class EventoDaoImpl implements IntEventoDao{
 	}
 
 	@Override
-	public List<Evento> mostrarDestacados(String destacado, String estado) {
+	public List<Evento> mostrarDestacados(char destacado, String estado) {
 		return evrepo.findByDestacadoAndEstado(destacado, estado);
 	}
 
@@ -99,5 +99,11 @@ public class EventoDaoImpl implements IntEventoDao{
 		} else {
 			return evrepo.findByTipo(idTipo);
 		}
+	}
+
+	@Override
+	public List<Evento> verPorDestacado(char destacado) {
+		// TODO Auto-generated method stub
+		return evrepo.findByDestacado(destacado);
 	}
 }

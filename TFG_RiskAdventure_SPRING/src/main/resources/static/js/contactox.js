@@ -124,13 +124,7 @@ $(document).ready(function(){
 
     }
      //Aplicamos eventos 
-    sobre.onclick=subrayaSobre;
-    home.onclick=subrayaHome;
-    eventos.onclick=subrayaEventos;
-    packs.onclick=subrayaPacks;
-    blog.onclick=subrayaBlog;
-    experiencias.onclick=subrayaExperiencias;
-    contacto.onclick=subrayaContacto;
+    
     enviar.click(mensaje);
 })
 

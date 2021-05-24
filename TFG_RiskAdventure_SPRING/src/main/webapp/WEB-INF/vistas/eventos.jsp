@@ -31,7 +31,7 @@
         <header>
           <div class="row" id="icon">
               <div id="iconos" class="col-md-12 col-xs-12 ">
-                <a href="carrito.php"><i class="fa fa-shopping-cart" id="carrito" title="carrito"></i></a>
+                <a href="carrito"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
                 <a href="login.php"><i class="fas fa-user" id="login" title="login"></i></a>
                 <i class="fas fa-search" id="buscar" title="buscar"></i>
               </div>
@@ -234,53 +234,47 @@
 
 
         <!-- FOOTER-----COMÚN-->
-        <footer class="row">
+        <footer class="row" >
             <!-- Logo risk adventure negativo-->
             <div class="col-md-8 col-xs-8"  id="adventure"><img src="../imagenes/footer_logo.png"></div>
-            <!-- sección de contáctanos-->
-            <div class="col-md-2 col-xs-2  " id="texto_footer">
-                <p>CONTÁCTANOS</p>
-            </div>
+            <!-- secciÃ³n de contÃ¡ctanos-->
+            <div class="col-md-2 col-xs-2  " id="texto_footer"><p>CONT&Aacute;CTANOS</p></div>
             <div class="col-md-4 col-xs-4 " id="contacto_footer">
-                <div id="dire">
-                    <p class="texto_contacto">Dirección :</p>
-                    <p>123 Avenida de Bolonia, Madrid</p>
-                </div>
-                <div id="email">
-                    <p class="texto_contacto">Email :</p>
-                    <p>info@riskadventureclub.com</p>
-                </div>
-                <div>
-                    <p class="texto_contacto">Teléfono :</p>
-                    <p>(+34)677 899 900</p>
-                </div>
+            <div id="dire">
+                <p class="texto_contacto">Direcci&oacute;n :</p>
+                <p>123 Avenida de Bolonia, Madrid</p>
+              </div>
+              <div id="email">
+                <p class="texto_contacto">Email :</p>
+                
+                <p>info@riskadventureclub.com</p>
+              </div>
+              <div>
+                <p class="texto_contacto">Tel&eacute;fono :</p>
+                <p>(+34) 654 123 656 </p>
+              </div>
             </div>
-            <!-- Logos publicitarios-->  
+          <!-- Logos publicitarios-->  
           <div class="col-md-12 col-xs-12" id="publi">
-              <a href="https://eu.oneill.com/"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
-              <a href="https://www.columbia.com/"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
-              <a href="https://www.escapadarural.com/"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
-              <a href="https://www.lasportiva.com/es"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
-              <a href="https://www.decathlon.es/es/"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
-              <a href="http://www.bardis.com/"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
+              <a href="https://eu.oneill.com/" target="_blank"><img src="../imagenes/footer_oneill.png" id="oneill"/></a>
+              <a href="https://www.columbia.com/" target="_blank"><img src="../imagenes/footer_columbias.jpg" id="columbia"/></a>
+              <a href="https://www.escapadarural.com/" target="_blank"><img src="../imagenes/footer_escapada_rural.jpg" id="escapada"/></a>
+              <a href="https://www.lasportiva.com/es" target="_blank"><img src="../imagenes/footer_la_esportiva.jpg" id="esportiva"/></a>
+              <a href="https://www.decathlon.es/es/" target="_blank"><img src="../imagenes/footer_decathlon.png" id="decathlon"/></a>
+              <a href="http://www.bardis.com/" target="_blank"><img src="../imagenes/footer_restaurante.jpg" id="restaurante"/></a>
           </div>
-            <!-- iconos redes sociales y texto copyright-->
+          <!-- iconos redes sociales y texto copyright-->
           <div class="col-md-12 col-xs-12" id="redes">
-              <p>Síguenos en:</p>
-              <a href="https://m.facebook.com/adventurerisk/"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
-              <a href="https://www.instagram.com/riskadventure/"><i class="fab fa-instagram" title="instagram"></i></a>
-              <a href="https://cutt.ly/UvIKPOG"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
-              <a href="https://twitter.com/adventurerisk"><i class="fab fa-twitter" title="twitter"></i></a>
-              <p>2020 © Copyright</p>
+              <p>S&iacute;guenos en:</p>
+              <a href="https://m.facebook.com/adventurerisk/" target="_blank"><i class="fab fa-facebook-f" id="face" title="facebook"></i></a>
+              <a href="https://www.instagram.com/riskadventure/" target="_blank"><i class="fab fa-instagram" title="instagram"></i></a>
+              <a href="https://cutt.ly/UvIKPOG" target="_blank"><i class="fab fa-whatsapp" title="whatsapp"></i></a>
+              <a href="https://twitter.com/adventurerisk" target="_blank"><i class="fab fa-twitter" title="twitter"></i></a>
+              <p>2020 &copy; Copyright</p>
           </div>
-            <hr>
-            <!-- efecto bolitas---COMÚN-->
-
-            <!--enlaces a aviso legal, política de privacidad y cookies-->
-            <div class="col-md-12 col-xs-12 " id="privacidad"> <a href="aviso_legal.php" id="aviso_legal">Aviso
-                    Legal</a> | <a href="politica_privacidad.php" id="politica_privacidad">Política de privacidad</a> |
-                <a href="cookies.php" id="cookies"> Cookies</a>
-            </div>
+          
+          <!--enlaces a aviso legal, polÃ­tica de privacidad y cookies--> 
+          <div class="col-md-12 col-xs-12 " id="privacidad"> <a href="aviso_legal" id="aviso_legal">Aviso Legal</a> | <a href="politica_privacidad" id="politica_privacidad">Pol&iacute;tica de privacidad</a> | <a href="cookies" id="cookies"> Cookies</a></div>
         </footer>
         <script type="text/javascript" src="../js/eventos.js"></script>
         <!--Enlace externo a archivo JS-->
