@@ -31,7 +31,7 @@ public class Evento implements Serializable {
 
 	
 
-	private char destacado;
+	private String destacado;
 
 	
 
@@ -131,11 +131,11 @@ public class Evento implements Serializable {
 
 	
 
-	public char getDestacado() {
+	public String getDestacado() {
 		return this.destacado;
 	}
 
-	public void setDestacado(char destacado) {
+	public void setDestacado(String destacado) {
 		this.destacado = destacado;
 	}
 

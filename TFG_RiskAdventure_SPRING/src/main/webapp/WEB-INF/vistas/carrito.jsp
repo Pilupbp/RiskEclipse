@@ -85,31 +85,33 @@
           </div>
         </header>                                        
                                                        <!-- SECTION-->
-                  <hr> 
-                    <h2>Bienvenido/a a su carrito</h2>
-                    <hr>
-                    <h3>P&aacute;gina en construcci&oacute;n. Aqu&iacute; ver&aacute; el usuario los productos elegidos</h3>
-                    <hr>
-                    <hr> 
-                    <h2>Bienvenido/a a su carrito</h2>
-                    <hr>
-                    <h3>P&aacute;gina en construcci&oacute;n. Aqu&iacute; ver&aacute; el usuario los productos elegidos</h3>
-                    <hr>
-                    <hr> 
-                    <h2>Bienvenido/a a su carrito</h2>
-                    <hr>
-                    <h3>P&aacute;gina en construcci&oacute;n. Aqu&iacute; ver&aacute; el usuario los productos elegidos</h3>
-                    <hr>
-                    <hr> 
-                    <h2>Bienvenido/a a su carrito</h2>
-                    <hr>
-                    <h3>P&aacute;gina en construcci&oacute;n. Aqu&iacute; ver&aacute; el usuario los productos elegidos</h3>
-                    <hr>
-                    <hr> 
-                    <h2>Bienvenido/a a su carrito</h2>
-                    <hr>
-                    <h3>P&aacute;gina en construcci&oacute;n. Aqu&iacute; ver&aacute; el usuario los productos elegidos</h3>
-                    <hr>
+                  
+                    <h1>¡Bienvenido/a ..............!</h1>
+                    
+                    <h2>A continuaci&oacute;n, se muestran sus <b>reservas</b>:</h2>
+			        <c:choose>
+				        <c:when test="${listaTipoTierra!=null && listaTipoTierra.size()!=0}">
+					        <table border="2">
+					        	<th>idTipo</th><th>Nombre</th>
+					        	<c:forEach var="ele" items="${listaTipoTierra }">
+					        		<tr>
+					        			<td>${ele.idReserva}</td>
+					        			<td>${ele.idEvento}</td>
+					        			<td>${ele.idUsuario}</td>
+					        			<td>${ele.precioVenta}</td>
+					        			<td>${ele.observaciones}</td>
+					        			<td>${ele.cantidad}</td>
+					        		</tr>
+					        	</c:forEach>
+					        </table>
+				        </c:when>
+				        <c:otherwise>
+				        	<h2>¡ No tienes reservas actualmente!</h2><br>
+				        	<a href="ofertas"><div class="boton">VOLVER A OFERTAS</div></a>
+				        </c:otherwise>
+			        </c:choose>
+                    <br><br>
+                    
           <!-- FOOTER-----COMÃšN-->
       <footer class="row" >
             <!-- Logo risk adventure negativo-->

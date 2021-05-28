@@ -115,43 +115,24 @@ li:hover {
   border-color: inherit; 
   border-top: none;
 }
-              /*SECTION*/
+
+ /*SECTION*/
+/*Imagenes superiores*/
 
 
-#exp1 {
-  margin: auto;
-  text-align: center;
-}
-#exp2 {
-  margin: auto;
-  text-align: center;
-}
-#exp3 {
+.text-center{
   margin: auto;
   text-align: center;
 }
 
-#exp1 img {
+.text-center img {
   width: 400px;
   height: 260px;
   text-align: center;
   margin-bottom: 1.5vw;
 
 }
-#exp2 img {
-  width: 400px;
-  height: 260px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-}
-#exp3 img {
-  width: 400px;
-  height: 260px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-}
+
 
 /*botones experiencias*/
 .button {
@@ -166,6 +147,7 @@ li:hover {
   padding-top: 0.4vw;
   font-size: 1vw;
   display: inline-block;
+  font-weight: bold;
   
 }
 .button:hover {
@@ -173,11 +155,11 @@ li:hover {
 }
 /*texto bajo imágenes experiencias*/
 
-#texto1{
+.container2 {
   text-align: center;
 }
 
-#texto1 div{
+.container2 div{
   text-align: center;
   font-size: 140%;
   display: inline-block;
@@ -185,70 +167,35 @@ li:hover {
 }
 
 
-#texto1 h1{
-  font-style: italic;
-}
-
-
-#texto1 img{
+.container2 img{
   width: 250px;
   height: 150px;
 }
 
 /*CONTINUAMOS SECTION----parte central--tarjetitas imágenes redondas--packs y grupos*/
-#circ1 {
-  margin: auto;
-  text-align: center;
-  margin-bottom: 5vw;
-}
-#circ2 {
+
+.circ2 {
   margin: auto;
   text-align: center;
   margin-bottom: 2vw;
   margin-top: 2.5vw;
 }
-#circ3 {
-  margin: auto;
+
+
+
+.circ2 img {
+  width: 200px;
+  height: 200px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 100%;
   text-align: center;
-  margin-bottom: 5vw;
+  margin-bottom: 1.2vw;
+  border: 4px solid #ba9e38;
 }
 
-#circ1 img {
-  width: 200px;
-  height: 200px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-radius: 100%;
-  text-align: cente;
-  margin-bottom: 1.5vw;
-  border: 4px solid #ba9e38;
-}
-#circ2 img {
-  width: 200px;
-  height: 200px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-radius: 100%;
-  text-align: center;
-  margin-bottom: 1.2vw;
-  border: 4px solid #ba9e38;
-}
-#circ3 img {
-  width: 200px;
-  height: 200px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-radius: 100%;
-  text-align: center;
-  margin-bottom: 1.2vw;
-  border: 4px solid #ba9e38;
-}
 .nombre  {
   margin-top: 4vw;
   margin-bottom: 4vw;
@@ -269,7 +216,7 @@ li:hover {
 
 /*Caja botones*/
 
-#div2_1{
+.div2_1{
   
   text-align: center;
   margin-top: 9%;
@@ -277,7 +224,8 @@ li:hover {
 }
 
 /*Botones*/
-#div2_1 div{
+
+.div2_1 div{
   padding: 1%;
   background-color: #8091a5;  
   margin-left: 4%;
@@ -289,30 +237,27 @@ li:hover {
   margin-bottom: 4%;
   
 }
-#div2_1 div:hover{
+.div2_1 div:hover{
   background-color: #ba9e38;
   
 }
 
-#div2_1 #vermas{
+.div2_1 #vermas{
   color:#ba9e38;
   font-size: 180%;
   font-weight: bolder;
 }
 
 
-#textoblog {
-  margin: auto !important;
-  text-align: center;
-}
-#tituloblog{
+
+h1{
   text-align: center;
   color:#3F4A56;
   font-weight: 800;
-  font-size: 700%;
+  font-size: 400%;
 }
 
-#texto3{
+.texto3{
   margin: auto;
   text-align: justify;
   color:#3F4A56;
@@ -320,105 +265,47 @@ li:hover {
   font-size: 140%;
 }
 
-#imagenes2{
-  text-align: center;
-  margin-top: 34% !important;
-  
- 
-}
 
-#blog1{
+
+.blog1{
   margin: auto;
   text-align: center;
   margin-top: 1.5vw;
-}
 
-#blog1 p:hover{
-  background-color: #ba9e38;
-  
-}
-
-#blog2 {
-  margin: auto;
-  text-align: center;
-  margin-top: 1.5vw;
-}
-#blog2 p:hover{
-  background-color: #ba9e38;
-  
-}
-
-#blog3 {
-  margin: auto;
-  text-align: center;
-  margin-top: 1.5vw;
-}
-#blog3 p:hover{
-  background-color: #ba9e38;
-  
-}
-
-#blog4 {
-  margin: auto;
-  text-align: center;
-  margin-top: 1.5vw;
-}
-#blog4 p:hover{
-  background-color: #ba9e38;
-  
-}
-
-#blog1 img {
-  width: 300px;
-  height: 190px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-
-}
-#blog2 img {
-  width: 300px;
-  height: 190px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-}
-#blog3 img {
-  width: 300px;
-  height: 190px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-}
-#blog4 img {
-  width: 300px;
-  height: 190px;
-  text-align: center;
-  margin-bottom: 1.5vw;
-  
-}
-
-#imagenes2 p{
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
   color: #3F4A56;
 }
-#boton_blog {
-  margin-top: 2%;
-  text-align: center;
+
+.blog1 a{
+  font-size: 2rem;
+  font-weight: bold;
 }
+
+
+.blog1 p:hover{
+  background-color: #ba9e38; 
+}
+
+
+.blog1 img {
+  width: 300px;
+  height: 190px;
+  text-align: center;
+  margin-bottom: 1.5vw;
+}
+
 .boton_blog_centro {
   width: 12vw;
   background-color: #8091a5;
   border-radius: 7px;
   color: white;
+  margin-top: 2rem;
   margin-bottom: 2vw;
   display: inline-block;
   text-align: center;
   padding-top: 0.7vw;
   padding-bottom: 0.4vw;
   font-size: 1vw;
+  font-weight: bold;
 }
 .boton_blog_centro:hover {
   background-color: #ba9e38;
@@ -702,9 +589,7 @@ a #restaurante {
     font-size: 1vw;
     margin-bottom: 10px;
   }
-  #logo_menu {
-    width: 80vw !important;
-  }
+ 
   #home {
     margin-left: 0px !important;
   }
@@ -743,12 +628,9 @@ a #restaurante {
     font-size: 1.5vw;
     margin-bottom: 10px;
   }
-  #logo {
-    width: 100%;
-  }
-  #logo1 {
-    width: 100%;
-  }
+  /*SECTION*/
+
+
   #home {
     margin-left: 0px !important;
   }
@@ -789,6 +671,15 @@ a #restaurante {
     padding-bottom: 0px;
     bottom: 0px !important;
   }
+  
+  
+  .text-center img {
+  width: 200px;
+  height: 130px;
+  text-align: center;
+  margin-bottom: 1.5vw;
+
+}
                                              /*FOOTER -----COMÚN*/
   #email p {
     margin: 0px;

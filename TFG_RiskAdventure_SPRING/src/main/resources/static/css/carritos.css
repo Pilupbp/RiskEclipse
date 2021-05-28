@@ -112,6 +112,22 @@ li:hover {
   border-color: inherit; 
   border-top: none;
 }
+ .boton{
+  padding: 1%;
+  background-color: #8091a5;  
+  margin-left: 4%;
+  font-size: 130%;
+  border-radius: 7px;
+  font-weight: bolder;
+  display: inline-block;
+  color: white;
+  margin-bottom: 4%;
+  text-align: center;
+  }
+.boton:hover{
+  background-color: #ba9e38;
+  
+  }
 
 
                                         /*FOOTER-------------COMÚN*/

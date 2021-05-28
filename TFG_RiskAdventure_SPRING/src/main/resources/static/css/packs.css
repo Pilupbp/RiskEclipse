@@ -134,14 +134,14 @@ li:hover {
     }
 
 
-    #div2_1{
+    .div2_1{
 
     text-align: center;
     
     }
     
     /*Botones*/
-    #div2_1 div{
+    .div2_1 div{
     padding: 1%;
     background-color: #8091a5;  
     margin-left: 4%;
@@ -152,13 +152,21 @@ li:hover {
     color: white;
     margin-bottom: 4%;
     }
-    #div2_1 div:hover{
+    .div2_1 div:hover{
     background-color: #ba9e38;
     
     }
     
+    .div2_1 a{
+    color: white;
+    }
 
 /*PACKS*/
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
 
 #packs {
   background-image: linear-gradient(#ba9e38, #ba9e38);
@@ -383,6 +391,8 @@ hr {
   width: 7px;
   height: 7px;
 }
+
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -425,7 +435,7 @@ hr {
 .boton {
   margin-left: 15vw;
   background-color: #8091a5;
-  color: white;
+  color: #ba9e38;
   text-align: center;
   padding-top: 1vw;
   font-size: 1vw;
@@ -433,7 +443,7 @@ hr {
   height: 5vw;
   border-radius: 7px;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   padding-bottom: 5vw;
 }
@@ -683,6 +693,11 @@ a #restaurante {
     padding-bottom: 0px;
     bottom: 0px !important;
   }
+  .card{
+  margin-left: 0px;
+  width: 100%;
+  }
+  
   
   /*EFECTO BOLAS--------COMÚN*/
   .bola {

@@ -8,8 +8,8 @@
 <head>
     <title>Ofertas</title><!-- título-->
     <meta charset="utf-8"><!--juego caracteres del lengiaje-->
-    <meta name="keywords" content="Artículos, blog, experiencias, lectura, recomendaciones"><!-- palabras clave-->
-    <meta name="description" content="Más artículos de nuestra guía de experiencias, podrás buscar entre un montón de experiencias únicas de multiaventura, deporte en entornos rurales y de ciudad."><!-- descripción-->
+    <meta name="keywords" content="Ofertas, deportes, multiaventura, paquetes de aventura, familias, grupos, parejas"><!-- palabras clave-->
+    <meta name="description" content="Todas las ofertas m�s atractivas para que puedas practicar cualquier deporte de aventura, de forma individual, parejas o grupos.."><!-- descripción-->
     <meta name="author" content="Raúl Montero, Pilar Bermejo, Lidia Martínez"><!-- autores-->
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- escla visualización-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -57,7 +57,7 @@
                     <ul class="nav navbar-nav">
                       <li><a id="home" href="index">HOME</a></li>
                       <li class="dropdown">
-				        <a href="experiencias" class="dropdown-toggle" data-toggle="dropdown">
+				        <a href="experiencias" id="experiencias"  class="dropdown-toggle" data-toggle="dropdown">
 				          EXPERIENCIAS<b class="caret"></b>
 				        </a>
 				        <ul class="dropdown-menu">
@@ -132,9 +132,9 @@
 			        			<td>${ele.descripcion}</td>
 			        			<td><fmt:formatDate value ="${ele.fechaInicio}"></fmt:formatDate></td>
 			        			<td>${ele.duracion}</td>
-			        			<td>${ele.precio}</td>
-			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas" >Detalle</div></a></td>
-			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas">Reservar</div></a></td>
+			        			<td>${ele.precio}&euro;</td>
+			        			<td><a  href="/riskadventure/detalleOferta?idEvento=${ele.idEvento }"><div class="ofertas" >Detalle</div></a></td>
+			        			<td><a  href="carrito"><div class="ofertas">Reservar</div></a></td>
 			        			
 			        		</tr>
 			        	</c:forEach>
@@ -151,9 +151,9 @@
 			        			<td>${ele.descripcion}</td>
 			        			<td><fmt:formatDate value ="${ele.fechaInicio}"></fmt:formatDate></td>
 			        			<td>${ele.duracion}</td>
-			        			<td>${ele.precio}</td>
-			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas" >Detalle</div></a></td>
-			        			<td><a  href="mailto:info@riskadventureclub.com"><div class="ofertas">Reservar</div></a></td>
+			        			<td>${ele.precio}&euro;</td>
+			        			<td><a href="/riskadventure/detalleOferta?idEvento=${ele.idEvento }"><div class="ofertas" >Detalle</div></a></td>
+			        			<td><a href="carrito"><div class="ofertas">Reservar</div></a></td>
 			        			
 			        		</tr>
 			        	</c:forEach>

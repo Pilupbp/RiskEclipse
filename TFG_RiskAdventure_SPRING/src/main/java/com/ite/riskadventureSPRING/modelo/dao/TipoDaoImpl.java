@@ -35,7 +35,33 @@ public class TipoDaoImpl implements IntTipoDao {
 	}
 
 
+	@Override
+	public int crearTipo(Tipo tipo) {
+		int filas = 0;
+		
+		//Si el try va bien, filas pasa a ser 1
+		try {
+			trepo.save(tipo);
+		filas = 1;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return filas;
+	}
 
-
+	@Override
+	public int eliminarTipo(int idTipo) {
+		int filas = 0;
+		
+		try {
+			trepo.deleteById(idTipo);
+			filas = 1;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return filas;
+	}
 
 }

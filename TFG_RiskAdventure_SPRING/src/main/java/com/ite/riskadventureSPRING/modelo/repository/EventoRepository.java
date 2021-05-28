@@ -12,12 +12,12 @@ public interface EventoRepository extends JpaRepository<Evento, Integer> {
 	
 	public List<Evento> findByEstado(String estado);
 	
-	public List<Evento> findByDestacadoAndEstado(char destacado, String estado);
+	public List<Evento> findByDestacadoAndEstado(String destacado, String estado);
 	
 	@Query("SELECT e FROM Evento e WHERE e.tipo.idTipo = ?1")
 	public List<Evento> findByTipo(int idTipo);
 	@Query("SELECT e FROM Evento e WHERE e.destacado = ?1")
-	public List<Evento> findByDestacado(char destacado);
+	public List<Evento> findByDestacado(String destacado);
 
 }
 

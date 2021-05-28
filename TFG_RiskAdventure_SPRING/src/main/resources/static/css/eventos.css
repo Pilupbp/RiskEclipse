@@ -206,7 +206,6 @@ li:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-left: 25vw;
   text-align: left;
   margin-right: 0vw !important;
 }
@@ -239,7 +238,7 @@ li:hover {
   -o-background-size: cover;
   background-size: cover;
   text-align: left;
-  margin-left: 27vw;
+  margin-left: 35%;
   margin-right: 0vw !important;
   margin-top: 3vw;
   margin-bottom: 2vw;

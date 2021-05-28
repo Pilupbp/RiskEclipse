@@ -107,8 +107,8 @@
         <hr>
 
         <article class="row">
-            <div class="col-md-12 col-xs-12  " id="div2_1">
-              <a href="/riskadventure/tipoOfertaDestacado?destacado=s"><div class="boton">MOSTRAR OFERTAS PACKS & GRUPOS</div></a>
+            <div class="col-md-12 div2_1">
+              <a href="/riskadventure/tipoOfertaDestacado?destacado=s"><div>MOSTRAR OFERTAS PACKS & GRUPOS</div></a>
               <a href="mailto:info@riskadventureclub.com"><div>PRESUPUESTO A MEDIDA</div></a>  <br>  
               
               <c:choose>
@@ -136,8 +136,9 @@
         
                                                          
         <!-- SECTION-->
+        
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-6">
                     <div class="card">
                         <div class="card-color">
                             <span class="card-title">Despedidas</span>
@@ -152,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-6">
                     <div class="card">
                         <div class="card-color">
                             <span class="card-title">Grupos</span>
@@ -166,7 +167,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+             </div>
+             <div class="row">   
+               
+                <div class="col-12 col-sm-6">
                     <div class="card">
                         <div class="card-color">
                             <span class="card-title">Familias</span>
@@ -181,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-6">
                     <div class="card">
                         <div class="card-color">
                             <span class="card-title">Parejas</span>
@@ -197,6 +201,7 @@
                     </div>
                 </div>
             </div>
+            
             <section class="row">
                 <div class="col-md-12" id="bolitas">
                     <div id="bola1" class="bola"></div>
@@ -228,12 +233,13 @@
                     <div id="bola26" class="bola"></div>
                 </div>
             </section>
+            
             <div class="child-page-listing">
 
                 <div class="grid-container">
                     <article id="3685" class="location-listing">
                         <div class="location-image" id="lasportiva">
-                            <a href="https://www.lasportiva.com/es" target="_blank"><img width="320" height="169" src="../imagenes/la_sportiva.jpg"  alt="La Sportiva"> </a>
+                            <a href="https://www.lasportiva.com/es" target="_blank"><img width="300" height="169" src="../imagenes/la_sportiva.jpg"  alt="La Sportiva"> </a>
                         </div>
                     </article>
                     <article id="3688" class="location-listing">
@@ -257,7 +263,7 @@
                         </div>
                     </article>
                 </div>
-
+			
                     <div class="row">
                         <div class="col-md-1 col-xs-1">
                             <!-- Create an icon wrapped by the fa-stack class -->
@@ -275,10 +281,10 @@
                         </p>
                     </div>
                     <div class="col-md-4 col-xs-12 textopacks">PAQUETES DE FIN DE SEMANA</div>
-                    <div class="col-md-7 col-xs-12">
-                        <a href="contacto#nombre">
-                            <div class="boton hidden-xs" > P&Iacute;DENOS PRESUPUESTO SIN COMPROMISO</div>
-                        </a>
+                    <div class="col-md-7 col-xs-12 div2_1">
+                        
+                            <div class="div2_1"> <a href="contacto#nombre"> P&Iacute;DENOS PRESUPUESTO SIN COMPROMISO</a></div>
+                        
                     </div>
                 </div>
             <div class="row">
@@ -321,6 +327,9 @@
                     <div id="bola26" class="bola"></div>
                 </div>
             </section>
+            
+            
+      </div>      
         <!-- FOOTER-----COMÚN-->
         <footer class="row" >
             <!-- Logo risk adventure negativo-->

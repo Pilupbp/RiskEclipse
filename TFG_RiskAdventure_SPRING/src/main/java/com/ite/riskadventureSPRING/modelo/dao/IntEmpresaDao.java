@@ -8,6 +8,7 @@ public interface IntEmpresaDao {
 	List<Empresa> verTodasEmpresas();
 	List<Empresa> verPorProvincia(int idProvincia);
 	List<Empresa> verPorExperiencia(int idExperiencia);
+	List<Empresa> verPorExperienciaProvincia(int idProvincia,int idExperiencia);
 }
 
 

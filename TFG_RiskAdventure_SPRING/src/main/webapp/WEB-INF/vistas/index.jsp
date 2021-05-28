@@ -83,12 +83,49 @@
 				          <li><a href="vermasblog">ARTÍCULOS</a></li>
 				          </ul>
                       <li><a id="contacto" href="contacto">CONTACTO</a></li>
+                      
                     </ul>
+                    
                   </div>
+                  	
             </nav>
+            
           </div>
+          	
+          
         </header>                                                  
                                                        <!-- SECTION-->
+        <!-- buscador oculto -->
+        <div id="ctn-bars-search">
+        		<input type="text" id="inputSearch"  placeholder="¿Qué deseas buscar?">
+       		</div>
+        
+        	
+        
+        <ul id="listaSearch">
+        	<li><a href="ofertas"><i class="fas fa-search" ></i>OFERTAS</a></li>
+        	<li><a href="contacto"><i class="fas fa-search" ></i>CONTACTO</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>EXPERIENCIA</a></li>
+        	<li><a href="nosotros"><i class="fas fa-search" ></i>NOSOTROS</a></li>
+        	<li><a href="blog"><i class="fas fa-search" ></i>BLOG</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PACKS</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>RESERVAS</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EMPRESA</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EVENTOS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>GRUPOS</a></li>
+        	<li><a href="login"><i class="fas fa-search" ></i>LOGIN</a></li>
+        	<li><a href="registro"><i class="fas fa-search" ></i>REGISTRO</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>FAMILIAS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>DESPEDIDAS</a></li>
+        	<li><a href="tierra"><i class="fas fa-search" ></i>TIERRA</a></li>
+        	<li><a href="agua"><i class="fas fa-search" ></i>AGUA</a></li>
+        	<li><a href="aire"><i class="fas fa-search" ></i>AIRE</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PAREJAS</a></li>
+        	<li><a href="vermasblog"><i class="fas fa-search" ></i>ARTICULOS</a></li>
+        	
+        </ul>
+        <div id="cover-ctn-search">
+        </div>
         <!-- carrusel-->
         <section class="row" id="carru" >
           <div class="col-md-12 " id="carrusel">

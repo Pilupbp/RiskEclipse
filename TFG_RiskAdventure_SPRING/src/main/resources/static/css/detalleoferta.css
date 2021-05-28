@@ -123,13 +123,31 @@ header {
   margin: auto;
   text-align: center;
   }
+  .botonOfertas{
+  	color: white !important;
+  }
+  table{
+  	font-size:17px;
+  	
+  }
+  #div2_1 .ofertas{
+  padding: 4%;
+  background-color: #8091a5;  
+  text-align:center;
+  margin:auto;
+  font-size: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  color: white;
   
+  }
   
   #ofertas img {
   width: 100%;
   text-align: center;
   margin-bottom: 1.5vw;
-  margin-top: -2.5vw;
+  margin-top: -2.0vw;
   }
   
   
@@ -157,7 +175,7 @@ header {
   
   }
   
-  /*Botones*/
+   /*Botones*/
   #div2_1 .boton{
   padding: 1%;
   background-color: #8091a5;  

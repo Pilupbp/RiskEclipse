@@ -10,5 +10,7 @@ public interface IntTipoDao {
 	Tipo verUno(int idTipo);
 	List<Tipo> verTodos();
 	List<Tipo> verPorExperiencia(int idExperiencia);
+	int crearTipo(Tipo tipo);
+	int eliminarTipo(int idTipo);
 
 }

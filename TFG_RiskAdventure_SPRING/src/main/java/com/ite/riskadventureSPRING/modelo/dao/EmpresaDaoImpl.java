@@ -35,4 +35,11 @@ public class EmpresaDaoImpl implements IntEmpresaDao {
 		return  erepo.verPorExperiencia(idExperiencia);
 	}
 
+
+	@Override
+	public List<Empresa> verPorExperienciaProvincia(int idProvincia, int idExperiencia) {
+		// TODO Auto-generated method stub
+		return erepo.verPorExperienciaProvincia(idProvincia, idExperiencia);
+
+	}
 }

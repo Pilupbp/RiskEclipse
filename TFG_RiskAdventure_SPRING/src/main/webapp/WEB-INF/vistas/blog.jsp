@@ -73,11 +73,11 @@
                       <li><a id="packs" href="packs">PACKS &amp; GRUPOS</a></li>
                       <li><a id="sobre" href="nosotros">NOSOTROS</a></li>
                       <li class="dropdown">
-				        <a href="blog" class="dropdown-toggle" data-toggle="dropdown">
+				        <a href="blog" id="blog" class="dropdown-toggle" data-toggle="dropdown">
 				          BLOG<b class="caret"></b>
 				        </a>
 				        <ul class="dropdown-menu">
-				        	<li><a href="blog">BLOG</a></li>
+				        	<li><a href="blog" >BLOG</a></li>
 				          <li><a href="vermasblog">ARTÍCULOS</a></li>
 				          </ul>
                       <li><a id="contacto" href="contacto">CONTACTO</a></li>

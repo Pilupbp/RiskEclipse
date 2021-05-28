@@ -1,27 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Experiencias de Agua</title><!-- título-->
+    <title>Detalle Oferta</title><!-- tÃ­tulo-->
     <meta charset="utf-8"><!--juego caracteres del lengiaje-->
-    <meta name="keywords" content="Experiencias únicas, calidad, tierra, agua, mar , aire, ..."><!-- palabras clave-->
-    <meta name="description" content="Elige tu experiencia de Agua y disfruta de una experiencia de aventura inigualable. Elige la actividad y la provincia donde deseas realizar tu actividad. Actividades multiaventura de agua."><!-- descripción-->
-    <meta name="author" content="Raúl Montero, Pilar Bermejo, Lidia Martínez"><!-- autores-->
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- escla visualización-->
+    <meta name="keywords" content="Ofertas, detalle de ofertas, aforo máximo, experiencia, multiaventura"><!-- palabras clave-->
+    <meta name="description" content="No te pierdas ni un solo detalle de nuestras ofertas, podrás ver el precio y la descripción más detallada, aforo y cantidad mínima de asistentes."><!-- descripciÃ³n-->
+    <meta name="author" content="RaÃºl Montero, Pilar Bermejo, Lidia MartÃ­nez"><!-- autores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- escla visualizaciÃ³n-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><!--cdn para los iconos fontawesome-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- cdn para librería jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- cdn para librerÃ­a jquery-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!--cdn para framework bootstrap-->
-    <link rel="stylesheet" href="../css/agua.css" type="text/css"><!--Enlace externo a CSS-->
+    <link rel="stylesheet" href="../css/detalleoferta.css" type="text/css"><!--Enlace externo a CSS-->
     <link rel="icon" type="image/png" href="../imagenes/favicon_risk2.png"><!--Favicon RISK-->
 </head>
 <body>
 
-    <!-- va todo el documento dentro de una caja con clase container que mediante Bootstrap nos permitirá hacer
-     nuestra página responsive y que se adapte a diferentes tamaños de pantalla. Para ello nos serviremos también
+    <!-- va todo el documento dentro de una caja con clase container que mediante Bootstrap nos permitirÃ¡ hacer
+     nuestra pÃ¡gina responsive y que se adapte a diferentes tamaÃ±os de pantalla. Para ello nos serviremos tambiÃ©n
       de las media queries @-->
       <div class="container">
                                                       <!-- HEADER----COMUN-->
@@ -35,11 +36,11 @@
               </div>
           </div>
           
-         <!-- menu ------------NAV INTEGRADO EN EL HEADER---COMÚN-->
+         <!-- menu ------------NAV INTEGRADO EN EL HEADER---COMÃN-->
           <div class="row" id="nav"> 
             <nav class="navbar navbar-default" role="navigation" id="menu">
-                  <!-- El logotipo y el icono que despliega el menú se agrupan
-                      para mostrarlos mejor en los dispositivos móviles -->
+                  <!-- El logotipo y el icono que despliega el menÃº se agrupan
+                      para mostrarlos mejor en los dispositivos mÃ³viles -->
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                             data-target=".navbar-ex1-collapse">
@@ -50,7 +51,7 @@
                     </button>
                     <a class="navbar-brand" href="index"><img src="../imagenes/header_logo_peque2.png"/></a>
                   </div>
-                  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                  <!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
                   otro elemento que se pueda ocultar al minimizar la barra -->
                   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -79,7 +80,7 @@
 				        </a>
 				        <ul class="dropdown-menu">
 				        	<li><a href="blog">BLOG</a></li>
-				          <li><a href="vermasblog">ART�CULOS</a></li>
+				          <li><a href="vermasblog">ARTÍCULOS</a></li>
 				          </ul>
                       <li><a id="contacto" href="contacto">CONTACTO</a></li>
                     </ul>
@@ -88,99 +89,56 @@
           </div>
         </header> 
 
-       
+        <!-- SECTION-->
        <!-- SECTION-->
-       
-       <section class="row" id="imagenes" >
-          <div class="col-md-12 col-xs-12 col-xm-12" id="agua">
-             <img src="../imagenes/mas_aqua.jpg" alt="Más experiencias Agua" title="Más Agua"></img>
-             <a href="agua"></a>
+        <section class="row" id="imagenes" >
+          <div class="col-md-12 col-xs-12 col-xm-12" id="ofertas">
+             <img src="../imagenes/verdetalle.jpg"></img>
+             <a href="ofertas"></a>
           </div>
 
         </section>
 
         <section class="row justify-content-center">
-            <div id=textoagua class="col-md-12">
-                <div>EXPERIENCIAS DE AGUA</div>
+            <div id=textoofertas class="col-md-12">
+                <div>EL DETALLE DE LA OFERTA QUE HAS SELECCIONADO ES EL SIGUIENTE:</div>
             </div>
-            <div id="texto" class="col-md-12">
-                <div> Experiencias de <b>aventura en Agua</b>, Mar, R&iacute;os, Lagos,... todas las actividades que tienen que ver
-                con el entorno acu&aacute;tico. Disfruta y sum&eacute;rgete en nuestras experiencias acu&aacute;ticas.
-                Podr&aacute;s ver un listado de las <b>Empresas de Agua </b> que forman parte de <b>Risk Adventure</b> 
-                y contactar directamente con ellas para que puedan realizar una reserva o actividad a tu medida. Todas nuestras 
-                empresas tienen el <b>Sello de Calidad y Seguridad de Risk Adventure.</b>
-                </div>
+
             </div>
-        </section>  
-
-        <hr>
-
-
+        </section>          
+		<br><br>
         <article class="row">
             <div class="col-md-12 col-xs-12  " id="div2_1">
-              <a href="tierra" id="consulta"><div>IR A TIERRA</div></a>
-              <a href="ofertas"><div>OFERTAS</div></a>
-              <a href="aire"><div>IR A AIRE</div></a>  <br>    
-              <a href="/riskadventure/tipoAgua?idExperiencia=2"><div>Ver empresas de Agua (TODAS)</div></a>
-              <p>Si lo deseas tambi�n puedes seleccionar Empresas por <b>PROVINCIA</b></p>
-              <form action="/riskadventure/aguaProvincia" method="post" >
-						<select name="idProvincia">
-							
-							<%--el value del option ser� el id del tema --%>			
-							<c:forEach var="p" items="${provincias}" >
-								<option value="${p.idProvincia}">${p.provincia}</option>
-							</c:forEach>
-						</select>
-						<select name="idExperiencia" id="desplExp">
-							
-							<%--el value del option ser� el id de experiencia igual que el name, que pasaran al request param --%>			
-							
-								<option value="2">AGUA</option>
-							
-						</select>
-						<br/><br/>
-						<input type="submit" class="boton" value="Ver empresas (POR PROVINCIA)"/>
-				</form>
-
-              	
-	              	<c:choose>
-				        <c:when test="${empresasProvinciaExperiencia!=null && empresasProvinciaExperiencia.size()!=0}">
-					        <table class="table table-striped table-hover" >
-					        	<th>Actividad</th><th>Empresa</th><th>Provincia</th><th>Tel�fono</th><th>Experiencia</th><th>Contacto</th>
-					        	<c:forEach var="ele" items="${empresasProvinciaExperiencia }">
-					        		<tr>
-					        			<td>${ele.nombreActividad}</td>      			
-					        			<td>${ele.nombreEmpresa}</td>
-					        			<td>${ele.nombreProvincia}</td>
-					        			<td>${ele.telefono}</td>
-					        			<td>${ele.experiencia.nombre}</td>
-					        			<td><a href="mailto:info@riskadventureclub.com"><div class="ofertas">Consultar</div></a></td>
-					        		</tr>
-					        	</c:forEach>
-					        </table>
-				        </c:when>
-			        </c:choose>
-              <c:choose>
-		        <c:when test="${listaTipoAgua!=null && listaTipoAgua.size()!=0}">
-			        <table class="table table-striped table-hover" >
-			        	<th>Actividad</th><th>Empresa</th><th>Provincia</th><th>Tel�fono</th><th>Contacto</th>
-			        	<c:forEach var="ele" items="${listaTipoAgua }">
-			        		<tr>
-			        			<td>${ele.nombreActividad}</td>
-			        			<td>${ele.nombreEmpresa}</td>
-			        			<td>${ele.nombreProvincia}</td>
-			        			<td>${ele.telefono}</td>
-			        			<td><a href="mailto:info@riskadventureclub.com"><div class="ofertas">Consultar</div></a></td>
-			        			
-			        		</tr>
-			        	</c:forEach>
-			        </table>
-		        </c:when>
-        	  </c:choose>           
+           		
+	           			<center>
+				        <table border="5">
+				        	<th>Id Evento</th><th>Descripci&oacute;n</th><th>Fecha Inicio</th><th>Duraci&oacute;n</th><th>Aforo M&aacute;ximo</th><th>M&iacute;nimo Asistencia</th><th>Precio</th>
+				        	
+				        		<tr>
+				        			<td>${verDetalleEvento.idEvento}</td>
+				        			<td>${verDetalleEvento.descripcion}</td>
+				        			<td>${verDetalleEvento.fechaInicio}</td>
+				        			<td>${verDetalleEvento.duracion}</td>
+				        			<td>${verDetalleEvento.aforoMaximo}</td>
+				        			<td>${verDetalleEvento.minimoAsistencia}</td>
+				        			<td>${verDetalleEvento.precio}&euro;</td>
+				        			<td><a href="carrito"><div class="ofertas">Reservar</div></a></td>
+				        			
+				        		</tr>
+				        	
+				        </table>
+				        </center>
+				        <br><br>
+		       	 	
+	           		
+	           		
+	              <a href="ofertas"><div class="boton">VOLVER A OFERTAS</div></a>
+              
+              
             </div>            
         </article>
-
-        <!-- efecto bolitas----COMÚN-->  
+       
+        <!-- efecto bolitas----COMÃN-->  
         <section class="row">
           <div class="col-md-12" id="bolitas">
             <div id="bola1" class="bola"></div>
@@ -213,11 +171,11 @@
           </div>
         </section> 
         
-        <!-- FOOTER-----COMÚN-->
+        <!-- FOOTER-----COMÃN-->
         <footer class="row" >
             <!-- Logo risk adventure negativo-->
             <div class="col-md-8 col-xs-8"  id="adventure"><img src="../imagenes/footer_logo.png"></div>
-            <!-- sección de contáctanos-->
+            <!-- secciÃ³n de contÃ¡ctanos-->
             <div class="col-md-2 col-xs-2  " id="texto_footer"><p>CONT&Aacute;CTANOS</p></div>
             <div class="col-md-4 col-xs-4 " id="contacto_footer">
             <div id="dire">
@@ -253,10 +211,10 @@
               <p>2020 &copy; Copyright</p>
           </div>
           
-          <!--enlaces a aviso legal, política de privacidad y cookies--> 
+          <!--enlaces a aviso legal, polÃ­tica de privacidad y cookies--> 
           <div class="col-md-12 col-xs-12 " id="privacidad"> <a href="aviso_legal" id="aviso_legal">Aviso Legal</a> | <a href="politica_privacidad" id="politica_privacidad">Pol&iacute;tica de privacidad</a> | <a href="cookies" id="cookies"> Cookies</a></div>
         </footer>
-        <script type="text/javascript" src="../js/experiencias.js"></script>
+        <script type="text/javascript" src="../js/blog.js"></script>
         <!--Enlace externo a archivo JS-->
     </div>
 </body>
