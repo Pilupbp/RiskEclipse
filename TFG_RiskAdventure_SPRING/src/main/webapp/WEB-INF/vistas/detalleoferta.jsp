@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,8 +89,41 @@
           </div>
         </header> 
 
-        <!-- SECTION-->
-       <!-- SECTION-->
+      
+     	<!-- buscador oculto -->
+   		<div id="ctn-bars-search">
+    			<input type="text" id="inputSearch"  placeholder="&iquest;Qu&eacute; deseas buscar?">
+   		</div>        	
+        
+        <ul id="listaSearch">
+        	<li><a href="ofertas"><i class="fas fa-search" ></i>OFERTAS</a></li>
+        	<li><a href="contacto"><i class="fas fa-search" ></i>CONTACTO</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>EXPERIENCIA</a></li>
+        	<li><a href="nosotros"><i class="fas fa-search" ></i>NOSOTROS</a></li>
+        	<li><a href="blog"><i class="fas fa-search" ></i>BLOG</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PACKS</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>RESERVAS</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EMPRESA</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EVENTOS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>GRUPOS</a></li>
+        	<li><a href="login"><i class="fas fa-search" ></i>LOGIN</a></li>
+        	<li><a href="registro"><i class="fas fa-search" ></i>REGISTRO</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>FAMILIAS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>DESPEDIDAS</a></li>
+        	<li><a href="tierra"><i class="fas fa-search" ></i>TIERRA</a></li>
+        	<li><a href="agua"><i class="fas fa-search" ></i>AGUA</a></li>
+        	<li><a href="aire"><i class="fas fa-search" ></i>AIRE</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PAREJAS</a></li>
+        	<li><a href="vermasblog"><i class="fas fa-search" ></i>ARTICULOS</a></li>
+        	<li><a href="politica_privacidad"><i class="fas fa-search" ></i>POLÍTICA</a></li>
+        	<li><a href="aviso_legal"><i class="fas fa-search" ></i>AVISO</a></li>
+        	<li><a href="cookies"><i class="fas fa-search" ></i>COOKIES</a></li>
+        	
+        </ul>
+        <div id="cover-ctn-search">
+        </div>
+        
+          <!-- SECTION-->
         <section class="row" id="imagenes" >
           <div class="col-md-12 col-xs-12 col-xm-12" id="ofertas">
              <img src="../imagenes/verdetalle.jpg"></img>
@@ -104,7 +137,7 @@
                 <div>EL DETALLE DE LA OFERTA QUE HAS SELECCIONADO ES EL SIGUIENTE:</div>
             </div>
 
-            </div>
+            
         </section>          
 		<br><br>
         <article class="row">

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+
 import com.ite.riskadventureSPRING.modelo.beans.Empresa;
 import com.ite.riskadventureSPRING.modelo.beans.Evento;
 import com.ite.riskadventureSPRING.modelo.beans.Experiencia;
@@ -347,7 +348,7 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 				System.out.println(mensajeinsert);
 			}
 			
-			model.addAttribute("mensajeinsert", mensajeinsert);
+			ratt.addFlashAttribute("mensajeinsert", mensajeinsert);
 			 return "redirect:/riskadventure/admin"; 
 			/*return new RedirectView("/riskadventure/activos");*/
 		}
@@ -379,11 +380,14 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 		
 		
 		
-		//Edita el evento seleccionado con el id que le pasemos
+		//Pasa los datos del objeto a editar al formulario
 		@GetMapping("/editar/{id}")
 		public String editarEvento(Model model, @PathVariable(name="id") int  idEvento) {
 			String mensajeupdate;
-			
+			List<Tipo> listadoTipos = tdao.verTodos();
+			model.addAttribute("listadoTipos", listadoTipos);
+			List<Empresa> listadoEmpresas=edao.verTodasEmpresas();
+			model.addAttribute("listadoEmpresas",listadoEmpresas);
 			Evento evento = evdao.mostrarEvento(idEvento);
 			
 			if(evento == null) {
@@ -391,8 +395,31 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			}
 			
 			model.addAttribute("evento", evento);
-			return "evento";
+			return "formEvento";
 		}
+		//Recibimos los datos del objeto modificado en el formulario y lo actualiza en la bbdd
+		@PostMapping("/modificar")
+		public String procesarFormularioEditar(RedirectAttributes ratt,Evento evento, @RequestParam("efechaInicio") @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaInicio ) {
+			
+			String mensajeupdate;
+			evento.setFechaInicio(fechaInicio);
+			int modificado=evdao.modificarEvento(evento);
+			
+			if(modificado == 1) {
+				mensajeupdate = "<span style=\"color: green;\">Se ha modificado el evento</span>";
+				System.out.println(mensajeupdate);
+			} else {
+				mensajeupdate = "<span style=\"color: red;\">Ha habido un error al intentar modificar el evento<span>";
+				System.out.println(mensajeupdate);
+			}
+				
+			ratt.addFlashAttribute("mensajeupdate", mensajeupdate);
+				
+			
+			return "redirect:/riskadventure/admin";				 
+			 
+		}
+		
 		//Clase que formatea la fecha para que al traerla de un form no de error
 		public void initBinder(WebDataBinder binder) {
 			SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd");

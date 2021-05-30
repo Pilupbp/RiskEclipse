@@ -96,11 +96,9 @@
         </header>                                                  
                                                        <!-- SECTION-->
         <!-- buscador oculto -->
-        <div id="ctn-bars-search">
-        		<input type="text" id="inputSearch"  placeholder="¿Qué deseas buscar?">
-       		</div>
-        
-        	
+   		<div id="ctn-bars-search">
+    			<input type="text" id="inputSearch"  placeholder="¿Qué deseas buscar?">
+   		</div>        	
         
         <ul id="listaSearch">
         	<li><a href="ofertas"><i class="fas fa-search" ></i>OFERTAS</a></li>
@@ -122,6 +120,9 @@
         	<li><a href="aire"><i class="fas fa-search" ></i>AIRE</a></li>
         	<li><a href="packs"><i class="fas fa-search" ></i>PAREJAS</a></li>
         	<li><a href="vermasblog"><i class="fas fa-search" ></i>ARTICULOS</a></li>
+        	<li><a href="politica_privacidad"><i class="fas fa-search" ></i>POLÍTICA</a></li>
+        	<li><a href="aviso_legal"><i class="fas fa-search" ></i>AVISO</a></li>
+        	<li><a href="cookies"><i class="fas fa-search" ></i>COOKIES</a></li>
         	
         </ul>
         <div id="cover-ctn-search">
@@ -176,7 +177,7 @@
         <!-- texto bajo carrusel-->
         <section class="row">
             
-          <div id="texto" class="col-md-12  ">
+          <div id="texto" class="col-md-12">
             <div>En Risk Adventure, desde nuestros or&iacute;genes hemos tenido una obsesi&oacute;n, sorprender y emocionar
 			 ofreciendo un servicio y una calidad excelente, experimentando las emociones, la adrenalina, la diversi&oacute;n,
 			 con los mejores equipos t&eacute;cnicos...
@@ -222,19 +223,19 @@
         <!-- imÃ¡genes circulares y botones-->  
         <section class="row"  >
           <div class="col-md-3" id="circ1">
-             <img src="../imagenes/home_packs_despedida2.jpg" alt="Despedidas" title="Despedidas"></img>
+             <img src="../imagenes/home_packs_despedida2.jpg" alt="Despedidas" title="Despedidas"/>
              <a href="packs"><div class="boton" id="boton1"> DESPEDIDAS</div></a>
           </div>
           <div class="col-md-3" id="circ2">
-             <img src="../imagenes/home_packs_grupos1.jpg" alt="Grupos" title="Grupos"></img>
+             <img src="../imagenes/home_packs_grupos1.jpg" alt="Grupos" title="Grupos"/>
              <a href="packs"><div class="boton" id="boton2"> GRUPOS</div></a>
           </div>
           <div class="col-md-3" id="circ3">
-             <img src="../imagenes/home_packs_familias1.jpg" alt="Familias" title="Familias"></img>
+             <img src="../imagenes/home_packs_familias1.jpg" alt="Familias" title="Familias"/>
              <a href="packs"><div class="boton" id="boton3"> FAMILIAS</div></a>
           </div>
           <div class="col-md-3" id="circ4">
-             <img src="../imagenes/home_packs_parejas1.jpg" alt="Parejas" title="Parejas"></img>
+             <img src="../imagenes/home_packs_parejas1.jpg" alt="Parejas" title="Parejas"/>
              <a href="packs"><div  class="boton" id="boton4"> PAREJAS</div></a>
           </div>
         </section>

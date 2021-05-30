@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'ddb168997' );
+define( 'DB_NAME', 'wordpress' );
 
 /** MySQL database username */
-define( 'DB_USER', 'ddb168997' );
+define( 'DB_USER', 'pilar' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', 'Risk*9999' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'bbdd.riskadventureclub.com' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );

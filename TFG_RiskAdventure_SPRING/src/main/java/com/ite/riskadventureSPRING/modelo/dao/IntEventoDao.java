@@ -15,5 +15,6 @@ public interface IntEventoDao {
 	List<Evento> mostrarDestacados(String destacado, String activo);
 	List<Evento> mostrarEventoPorTipo(int idTipo);
 	List<Evento> verPorDestacado(String destacado);
+	public int modificarEvento(Evento evento);
 
 }

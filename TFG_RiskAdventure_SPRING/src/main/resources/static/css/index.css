@@ -115,6 +115,7 @@ li:hover {
   border-top: none;
 }
                                                     /*SECTION*/
+/*Estilos del buscador*/
 
 #ctn-bars-search{
 	position:fixed;
@@ -125,19 +126,14 @@ li:hover {
 	padding:20px;
 	z-index:10;
 	transition:all 600ms;
-	
 }
 #ctn-bars-search input{
-	
 	width:1200px;
-	
 	padding:10px;
 	font-size:18px;
 	outline:0;
 	display: block;
     margin : 0 auto;
-	
-	
 }
 #listaSearch{
 	position:fixed;
@@ -156,7 +152,6 @@ li:hover {
   background-size: 0% ;
   transition: background-size 0s;
   display: block;
-  
   padding-bottom: 4px;
 }
 #listaSearch li a{
@@ -182,7 +177,9 @@ li:hover {
 	display:none;
 	transition:all 600ms;
 }
+
 /*carrusel*/
+
 #carru {
   margin-right: 0px;
   margin-left: 0px;

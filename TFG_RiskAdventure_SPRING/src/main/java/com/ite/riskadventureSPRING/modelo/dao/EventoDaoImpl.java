@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.ite.riskadventureSPRING.modelo.beans.Evento;
 import com.ite.riskadventureSPRING.modelo.repository.EventoRepository;
 
@@ -83,6 +84,20 @@ public class EventoDaoImpl implements IntEventoDao{
 		}
 		
 		
+		return filas;
+	}
+	@Override
+	public int modificarEvento(Evento evento) {
+		int filas = 0;
+		Evento ev1 = null;
+		try {
+			ev1 = evrepo.getOne(evento.getIdEvento());
+			ev1 = evento;
+			evrepo.save(ev1);
+			filas=1;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		return filas;
 	}
 

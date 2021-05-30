@@ -18,8 +18,10 @@ public interface EventoRepository extends JpaRepository<Evento, Integer> {
 	public List<Evento> findByTipo(int idTipo);
 	@Query("SELECT e FROM Evento e WHERE e.destacado = ?1")
 	public List<Evento> findByDestacado(String destacado);
+	
+	
 
-}
+}	
 
 
 

@@ -91,6 +91,38 @@
                                                        <!-- SECTION-->
 
             <!-- SECTION-->
+            <!-- buscador oculto -->
+   		<div id="ctn-bars-search">
+    			<input type="text" id="inputSearch"  placeholder="¿Qué deseas buscar?">
+   		</div>        	
+        
+        <ul id="listaSearch">
+        	<li><a href="ofertas"><i class="fas fa-search" ></i>OFERTAS</a></li>
+        	<li><a href="contacto"><i class="fas fa-search" ></i>CONTACTO</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>EXPERIENCIA</a></li>
+        	<li><a href="nosotros"><i class="fas fa-search" ></i>NOSOTROS</a></li>
+        	<li><a href="blog"><i class="fas fa-search" ></i>BLOG</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PACKS</a></li>
+        	<li><a href="experiencias"><i class="fas fa-search" ></i>RESERVAS</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EMPRESA</a></li>
+        	<li><a href="eventos"><i class="fas fa-search" ></i>EVENTOS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>GRUPOS</a></li>
+        	<li><a href="login"><i class="fas fa-search" ></i>LOGIN</a></li>
+        	<li><a href="registro"><i class="fas fa-search" ></i>REGISTRO</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>FAMILIAS</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>DESPEDIDAS</a></li>
+        	<li><a href="tierra"><i class="fas fa-search" ></i>TIERRA</a></li>
+        	<li><a href="agua"><i class="fas fa-search" ></i>AGUA</a></li>
+        	<li><a href="aire"><i class="fas fa-search" ></i>AIRE</a></li>
+        	<li><a href="packs"><i class="fas fa-search" ></i>PAREJAS</a></li>
+        	<li><a href="vermasblog"><i class="fas fa-search" ></i>ARTICULOS</a></li>
+        	<li><a href="politica_privacidad"><i class="fas fa-search" ></i>POLÍTICA</a></li>
+        	<li><a href="aviso_legal"><i class="fas fa-search" ></i>AVISO</a></li>
+        	<li><a href="cookies"><i class="fas fa-search" ></i>COOKIES</a></li>
+        	
+        </ul>
+        <div id="cover-ctn-search">
+        </div>
         <!-- texto inicio-->
         <section class="row justify-content-center">
             <div id=textopolitica class="col-md-12">
@@ -139,16 +171,152 @@
                 </div>
             </div>
         </section>
-
-       <!--COOKIES-->
-          <div id="overbox3">
-              <div id="infobox3">
-                  <p>Esta web utiliza cookies para obtener datos estad&iacute;sticos de la navegaci&oacute;n de sus usuarios. Si contin&uacute;as navegando consideramos que aceptas su uso.
-                  <a href="cookies">M&aacute;s informaci&oacute;n</a>
-                  <a onclick="aceptar_cookies();" style="cursor:pointer;">Cerrar</a></p>
-              </div>
-          </div>
+<!--COOKIES-->
+		<style>
+		 .cookies {
+		     position: fixed;
+		     bottom: 0;
+		     left: 0;
+		     right: 0;
+		     background: black;
+		     color: white;
+		     font-family: arial;
+		     text-align: center;
+		 }
+		
+		 .cookies__boton {
+		     background: initial;
+		     border: 2px solid white;
+		     padding: 1rem;
+		     font-size: 1rem;
+		     color: white;
+		     width: 5rem;
+		     text-align: center;
+		 }
+		
+		</style>
+		
+		<section class="cookies">
+		    <h2 class="cookies__titulo">¿Aceptas nuestras Cookies?</h2> 
+		    <p class="cookies__texto">Usamos cookies para mejorar tu experiencia en la web.</p>
+		    <div class="cookies__botones">
+		        <button class="cookies__boton cookies__boton--no">No</button>
+		        <button class="cookies__boton cookies__boton--si">Si</button>
+		    </div>
+		</section>
+		
+		<!-- No borrar, aquí se generarán todas las etiquetas <script> si acepta el usuario -->
+		<div id="nuevosScripts"></div>
+		
+		<script defer>
+		let cookies = () => {
+		    //======================================================================
+		    // COOKIES
+		    //======================================================================
+		
+		    //-----------------------------------------------------
+		    // Configuración
+		    //-----------------------------------------------------
+		    const urlsScriptsCookies = ['https://analytics.google.com', 'https://facebook.com'];
+		
+		    function contenidoScriptsCookies () {
+		        ////////////  ¿Google Analítics? /////////////
+		        ////////////  ¿Facebook Pixel? /////////////
+		        ////////////  ¿Admob? /////////////
+		        ////////////  etc  /////////////
+		    }
+		
+		
+		    //-----------------------------------------------------
+		    // Variables
+		    //-----------------------------------------------------
+		    const seccionCookie = document.querySelector('section.cookies');
+		    const cookieSi = document.querySelector('.cookies__boton--si');
+		    const cookieNo = document.querySelector('.cookies__boton--no');
+		    const nuevosScripts = document.querySelector('#nuevosScripts');
+		
+		    //-----------------------------------------------------
+		    // Funciones
+		    //-----------------------------------------------------
+		
+		    /**
+		      * Método que oculta la sección de Cookie para siempre
+		      */
+		    function ocultarCookie() {
+		        // Borra la sección de cookies en el HTML
+		        seccionCookie.remove();
+		    }
+		
+		    /**
+		      * Método que marca las cookies como aceptadas
+		      */
+		    function aceptarCookies() {
+		        // Oculta el HTML de cookies
+		        ocultarCookie();
+		        // Guarda que ha aceptado
+		        localStorage.setItem('cookie', true);
+		        // Tu codigo a ejecutar si aceptan las cookies
+		        ejecutarSiAcepta();
+		    }
+		
+		    /**
+		      * Método que marca las cookies como denegadas
+		      */
+		    function denegarCookies() {
+		        // Oculta el HTML de cookies
+		        ocultarCookie();
+		        // Guarda que ha aceptado
+		        localStorage.setItem('cookie', false);
+		    }
+		
+		    /**
+		      * Método que ejecuta tu código si aceptan las cookies
+		      */
+		    function ejecutarSiAcepta() {
+		        // Crea los <script>
+		        urlsScriptsCookies.forEach((url) => {
+		            const nuevoScript = document.createElement('script');
+		            nuevoScript.setAttribute('src', url);
+		            nuevosScripts.appendChild(nuevoScript);
+		        });
+		        // Lanza los códigos
+		        contenidoScriptsCookies();
+		    }
+		
+		    /**
+		      * Método que inicia la lógica
+		      */
+		    function iniciar() {
+		        // Comprueba si en el pasado el usuario ha marcado una opción
+		        if (localStorage.getItem('cookie') !== null) {
+		            if(localStorage.getItem('cookie') === 'true') {
+		                // Aceptó
+		                aceptarCookies();
+		            } else {
+		                // No aceptó
+		                denegarCookies();
+		            }
+		        }
+		    }
+		
+		    //-----------------------------------------------------
+		    // Eventos
+		    //-----------------------------------------------------
+		    cookieSi.addEventListener('click',aceptarCookies, false);
+		    cookieNo.addEventListener('click',denegarCookies, false);
+		
+		    return {
+		        iniciar: iniciar
+		    }
+		}
+		
+		// Activa el código. Comenta si quieres desactivarlo.
+		cookies().iniciar();
+		
+		</script>
+		
         <!--COOKIES-->
+       
         <!-- FOOTER-----COMÃšN-->
         <footer class="row" >
             <!-- Logo risk adventure negativo-->
