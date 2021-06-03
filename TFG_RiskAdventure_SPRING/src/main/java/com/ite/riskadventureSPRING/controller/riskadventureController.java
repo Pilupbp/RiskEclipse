@@ -1,14 +1,19 @@
-package com.ite.riskadventureSPRING.controller;
+ package com.ite.riskadventureSPRING.controller;
 
 
 	
 	import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-	import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 	import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -25,20 +30,30 @@ import org.springframework.web.servlet.view.RedirectView;
 import com.ite.riskadventureSPRING.modelo.beans.Empresa;
 import com.ite.riskadventureSPRING.modelo.beans.Evento;
 import com.ite.riskadventureSPRING.modelo.beans.Experiencia;
+import com.ite.riskadventureSPRING.modelo.beans.Perfile;
 import com.ite.riskadventureSPRING.modelo.beans.Provincia;
 import com.ite.riskadventureSPRING.modelo.beans.Tipo;
+import com.ite.riskadventureSPRING.modelo.beans.Usuario;
 import com.ite.riskadventureSPRING.modelo.dao.IntEmpresaDao;
 import com.ite.riskadventureSPRING.modelo.dao.IntEventoDao;
 import com.ite.riskadventureSPRING.modelo.dao.IntExperienciaDao;
+import com.ite.riskadventureSPRING.modelo.dao.IntPerfilDao;
 import com.ite.riskadventureSPRING.modelo.dao.IntProvinciaDao;
 import com.ite.riskadventureSPRING.modelo.dao.IntTipoDao;
+import com.ite.riskadventureSPRING.modelo.dao.IntUsuarioDao;
 import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 	
 
 	@Controller
 	@RequestMapping("/riskadventure")
-	public class riskadventureController {
+	public class riskadventureController  {
 		@Autowired
 		IntEmpresaDao edao;
 		@Autowired
@@ -49,6 +64,10 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 		IntExperienciaDao exdao;
 		@Autowired
 		IntProvinciaDao pdao;
+		@Autowired
+		IntUsuarioDao udao;
+		@Autowired
+		IntPerfilDao pedao;
 		
 		//Controlador de index--------------------------------------
 		@GetMapping("/index")
@@ -56,6 +75,84 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			model.addAttribute("mensaje","Risk Adventure ");
 			
 			return "index";
+			
+		}
+		//Login
+		@GetMapping("/formLogin")
+		public String login(Model model) {
+			model.addAttribute("mensaje","Risk Adventure ");
+			
+			return "formLogin";
+			
+		}
+		@GetMapping("/login")
+		
+		public String procesarLogin(Authentication aut, Model model,HttpSession sesion) {
+			
+				
+				
+			
+			
+			 System.out.println("hola");
+			String perfil = null;
+			String ir="";
+			
+			for (GrantedAuthority ele: aut.getAuthorities()) 
+				
+				perfil= ele.getAuthority();
+			
+			Usuario usuario=	udao.usuarioPorUser(aut.getName());
+			sesion.setAttribute("usuario", usuario);
+			
+			if(perfil=="WEB") {
+				
+			ir= "carrito";
+				
+			}
+			if(perfil=="ADMIN") {
+				
+			ir="admin";	
+			}
+			return ir;
+			
+		}
+		//Controlador de registro--------------------------------------
+		@GetMapping("/registro")
+		public String mostrarRegistro(Model model) {
+			
+			
+			return "registro";
+			
+		}
+		
+		@PostMapping("/registro")
+		public String registro(RedirectAttributes ratt, Usuario usuario ) {
+			String mensajeAlta;
+			System.out.println(usuario);
+			usuario.setEnabled(1);
+			Date fechaRegistro=new Date();
+			usuario.setFechaRegistro(fechaRegistro);
+			usuario.setPassword("{noop}"+usuario.getPassword());
+			List<Perfile> lista=new ArrayList<Perfile>();
+			lista.add(new Perfile(2,"WEB"));
+			
+			usuario.setPerfiles(lista);
+			int registrado=udao.insertarUsuario(usuario);
+			System.out.println(registrado);
+			if(registrado==1) {
+				mensajeAlta="Se ha registrado correctamente.<br> Loguese para acceder a sus reservas";
+				System.out.println(mensajeAlta);
+				ratt.addFlashAttribute("mensajeAlta", mensajeAlta);
+				return "redirect:/riskadventure/formLogin"; 
+			}else {
+				
+				mensajeAlta="No se ha registrado,intentelo de nuevo";
+				System.out.println(mensajeAlta);
+				ratt.addFlashAttribute("mensajeAlta", mensajeAlta);
+				return "registro";
+				
+			}
+			
 			
 		}
 		
@@ -248,13 +345,7 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			return "eventos";
 			
 		}
-		@GetMapping("/login")
-		public String inicio12(Model model) {
-			model.addAttribute("mensaje","Risk Adventure ");
-			
-			return "login";
-			
-		}
+		
 		@GetMapping("/nosotros")
 		public String inicio13(Model model) {
 			model.addAttribute("mensaje","Risk Adventure ");
@@ -276,13 +367,7 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			return "politica_privacidad";
 			
 		}
-		@GetMapping("/registro")
-		public String inicio16(Model model) {
-			model.addAttribute("mensaje","Risk Adventure ");
-			
-			return "registro";
-			
-		}
+		
 		@GetMapping("/vermasblog")
 		public String inicio17(Model model) {
 			model.addAttribute("mensaje","Risk Adventure ");
@@ -328,7 +413,7 @@ import com.ite.riskadventureSPRING.modelo.dao.TipoDaoImpl;
 			return "nuevoevento";
 		}
 		
-		
+		//Alta o insert
 		//Por Post, recojo las respuestas del formulario una vez relleno
 		@PostMapping("/create")
 		public /*RedirectView*/String altaEvento(Model model,RedirectAttributes ratt, Evento evento, @RequestParam("efechaInicio") @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaInicio) {

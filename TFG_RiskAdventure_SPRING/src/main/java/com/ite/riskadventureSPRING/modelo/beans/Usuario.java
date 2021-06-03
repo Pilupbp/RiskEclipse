@@ -2,6 +2,9 @@ package com.ite.riskadventureSPRING.modelo.beans;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+
+
 import java.util.Date;
 import java.util.List;
 
@@ -17,31 +20,17 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="ID_USUARIO")
-	private int idUsuario;
-
-	private String apellidos;
-
+	private String username;
 	
+	private String password;
+
+	private String email;
+	
+	private String nombre;
 
 	private String direccion;
 
-	
-
-	private String email;
-
-	
-
 	private int enabled;
-
-	
-
-	@Temporal(TemporalType.DATE)
-	@Column(name="FECHA_NACIMIENTO")
-	private Date fechaNacimiento;
-
-	
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="FECHA_REGISTRO")
@@ -49,52 +38,51 @@ public class Usuario implements Serializable {
 
 	
 
-	private String nombre;
-
-	
-
-	private String password;
-
-	
-
-	private String provincia;
-
-	private String telefono;
-
-	
-
-	private String username;
-
-	
-
-	//bi-directional many-to-one association to UsuarioPerfile
-	@OneToMany(mappedBy="usuario")
-	private List<UsuarioPerfile> usuarioPerfiles;
+	//uni-directional many-to-many association to Perfile
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+		name="usuario_perfiles"
+		, joinColumns={
+			@JoinColumn(name="USERNAME")
+			}
+		, inverseJoinColumns={
+			@JoinColumn(name="ID_PERFIL")
+			}
+		)
+	private List<Perfile> perfiles;
 
 	public Usuario() {
 	}
-
-	public int getIdUsuario() {
-		return this.idUsuario;
-	}
-
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
-	}
-
 	
 
-	public String getApellidos() {
-		return this.apellidos;
+	public Usuario(String username,  String direccion,String email, int enabled, Date fechaRegistro, String nombre,
+			String password, List<Perfile> perfiles) {
+		super();
+		this.username = username;
+		this.email=email;
+		this.direccion = direccion;
+		this.enabled = enabled;
+		this.fechaRegistro = fechaRegistro;
+		this.nombre = nombre;
+		this.password = password;
+		this.perfiles = perfiles;
 	}
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+
+	public String getUsername() {
+		return this.username;
 	}
 
-	
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String geEmail() {
+		return this.email;
+	}
 
-	
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	
 
@@ -106,26 +94,6 @@ public class Usuario implements Serializable {
 		this.direccion = direccion;
 	}
 
-	
-
-	
-
-	
-
-	
-
-	public String getEmail() {
-		return this.email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	
-
-	
-
 	public int getEnabled() {
 		return this.enabled;
 	}
@@ -133,20 +101,6 @@ public class Usuario implements Serializable {
 	public void setEnabled(int enabled) {
 		this.enabled = enabled;
 	}
-
-	public Date getFechaNacimiento() {
-		return this.fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
-
-	
-
-	
-
-	
 
 	public Date getFechaRegistro() {
 		return this.fechaRegistro;
@@ -156,14 +110,6 @@ public class Usuario implements Serializable {
 		this.fechaRegistro = fechaRegistro;
 	}
 
-	
-
-	
-
-	
-
-	
-
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -171,12 +117,6 @@ public class Usuario implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	
-
-	
-
-	
 
 	public String getPassword() {
 		return this.password;
@@ -186,58 +126,21 @@ public class Usuario implements Serializable {
 		this.password = password;
 	}
 
-	public String getProvincia() {
-		return this.provincia;
+	public List<Perfile> getPerfiles() {
+		return this.perfiles;
 	}
 
-	public void setProvincia(String provincia) {
-		this.provincia = provincia;
+	public void setPerfiles(List<Perfile> perfiles) {
+		this.perfiles = perfiles;
 	}
 
-	public String getTelefono() {
-		return this.telefono;
+
+	@Override
+	public String toString() {
+		return "Usuario [username=" + username + ", password=" + password + ", email=" + email + ", nombre=" + nombre
+				+ ", direccion=" + direccion + ", enabled=" + enabled + ", fechaRegistro=" + fechaRegistro
+				+ ", perfiles=" + perfiles + "]";
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-
-	
-
-	
-
-	
-
-	
-
-	public String getUsername() {
-		return this.username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public List<UsuarioPerfile> getUsuarioPerfiles() {
-		return this.usuarioPerfiles;
-	}
-
-	public void setUsuarioPerfiles(List<UsuarioPerfile> usuarioPerfiles) {
-		this.usuarioPerfiles = usuarioPerfiles;
-	}
-
-	public UsuarioPerfile addUsuarioPerfile(UsuarioPerfile usuarioPerfile) {
-		getUsuarioPerfiles().add(usuarioPerfile);
-		usuarioPerfile.setUsuario(this);
-
-		return usuarioPerfile;
-	}
-
-	public UsuarioPerfile removeUsuarioPerfile(UsuarioPerfile usuarioPerfile) {
-		getUsuarioPerfiles().remove(usuarioPerfile);
-		usuarioPerfile.setUsuario(null);
-
-		return usuarioPerfile;
-	}
 
 }

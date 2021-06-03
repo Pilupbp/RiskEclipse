@@ -47,6 +47,14 @@ header {
     background-color: #ba9e38;
     color: white;
   }
+  #logout {
+  margin-left: 7%;
+ }
+#logout:hover {
+  cursor: pointer;
+  background-color: #ba9e38;
+  color: white;
+ }
   #carrito:hover {
     cursor: pointer;
     background-color: #ba9e38;

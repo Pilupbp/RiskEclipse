@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>Login</title>
-   <!--Made with love by Mutiullah Samim -->
+   
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--Bootsrap 4 CDN-->
   
@@ -45,22 +45,24 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form method="POST" action="carrito.php">
+				<form  action="/riskadventure/login" method="get" >
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username" name="user" required>
+						<input type="text" class="form-control" placeholder="username" name="username" required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password" name="pass" required>
+						<input type="password" class="form-control" placeholder="password" name="password" required>
 					</div>
           
-          
+          			<div class="form-group">
+						<span>${mensajeAlta}</span>
+					</div>
 					
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
@@ -69,7 +71,7 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					&iquest;A&uacute;n no tienes una cuenta?<a href="registro" target="_blank">Reg&iacute;strate</a>
+					&iquest;A&uacute;n no tienes una cuenta?<a href="/riskadventure/registro" target="_blank">Reg&iacute;strate</a>
 				</div>
 				
 			</div>

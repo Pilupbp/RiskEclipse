@@ -41,6 +41,14 @@ header {
 #buscar {
   margin-left: 7%;
 }
+#logout {
+  margin-left: 7%;
+ }
+#logout:hover {
+  cursor: pointer;
+  background-color: #ba9e38;
+  color: white;
+ }
 #buscar:hover {
   cursor: pointer;
   background-color: #ba9e38;

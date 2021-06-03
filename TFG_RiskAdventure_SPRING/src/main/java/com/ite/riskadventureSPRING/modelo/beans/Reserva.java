@@ -20,24 +20,17 @@ public class Reserva implements Serializable {
 	@Column(name="ID_RESERVA")
 	private int idReserva;
 
-	private int cantidad;
-
-	
-
-	
+	private int cantidad;	
 
 	private String observaciones;
 
-	
-
 	@Column(name="PRECIO_VENTA")
 	private BigDecimal precioVenta;
-
 	
 
 	//uni-directional many-to-one association to Usuario
 	@ManyToOne
-	@JoinColumn(name="ID_USUARIO")
+	@JoinColumn(name="USERNAME")
 	private Usuario usuario;
 
 	//bi-directional many-to-one association to Evento
@@ -47,11 +40,6 @@ public class Reserva implements Serializable {
 
 	public Reserva() {
 	}
-
-	
-
-	
-
 	
 
 	public int getCantidad() {
@@ -62,8 +50,6 @@ public class Reserva implements Serializable {
 		this.cantidad = cantidad;
 	}
 
-	
-
 	public int getIdReserva() {
 		return this.idReserva;
 	}
@@ -72,9 +58,6 @@ public class Reserva implements Serializable {
 		this.idReserva = idReserva;
 	}
 
-	
-
-	
 
 	public String getObservaciones() {
 		return this.observaciones;
@@ -84,9 +67,6 @@ public class Reserva implements Serializable {
 		this.observaciones = observaciones;
 	}
 
-	
-
-	
 
 	public BigDecimal getPrecioVenta() {
 		return this.precioVenta;

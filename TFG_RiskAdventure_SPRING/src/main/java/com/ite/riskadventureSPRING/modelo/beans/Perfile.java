@@ -27,10 +27,11 @@ public class Perfile implements Serializable {
 
 	public Perfile() {
 	}
-
-	
-
-	
+	public Perfile(int idPerfil, String nombre) {
+		super();
+		this.idPerfil = idPerfil;
+		this.nombre = nombre;
+	}
 
 	public int getIdPerfil() {
 		return this.idPerfil;
@@ -40,11 +41,8 @@ public class Perfile implements Serializable {
 		this.idPerfil = idPerfil;
 	}
 
-	
 
-	
 
-	
 
 	public String getNombre() {
 		return this.nombre;
