@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registro Risk Adventure</title>
+	<title>Registro</title>
    <!--Made with love by Mutiullah Samim -->
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--Bootsrap 4 CDN-->
@@ -50,7 +50,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Username" name="username" required>
+						<input type="text" class="form-control" placeholder="Nombre de usuario" name="username" required>
 						
 					</div>
 					<div class="input-group form-group">

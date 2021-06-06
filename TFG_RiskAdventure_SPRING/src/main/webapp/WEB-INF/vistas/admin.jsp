@@ -15,7 +15,16 @@
 	</head>
 
 <body>
+
+	
 	<a class="navbar-brand" href="index"><img src="../imagenes/header_logo_peque2.png"/></a>
+	<div class="row" id="icon">
+              <div id="iconos" class="col-md-12 col-xs-12 ">
+				
+                <i class="fas fa-user-cog"></i>${usuario.username}
+                <a href="/riskadventure/logout"><i class="fas fa-sign-out-alt" id="logout" title="logout"></i></a>
+
+              </div>
     <h1>PANEL ADMINISTRADOR</h1>
   
     <div class="container">
@@ -24,6 +33,7 @@
         <h2>Listado de Ofertas activas</h2>
         
         <a href="/riskadventure/create" class="buttonCTA last">CREAR NUEVA OFERTA</a><br>
+        <a href="" class="buttonCTA last">VER RESERVAS USUARIOS</a><br>
         <p>${mensajedelete}</p>
         <p>${mensajeinsert}</p>
         <p>${mensajeupdate }</p>
@@ -48,7 +58,7 @@
 	                <td>${ele.nombre}</td>
 	                <td>${ele.precio} €</td>
 	                <td><a class="edit" href="/riskadventure/editar/${ele.idEvento}"> Editar</a></td>
-		            <td><a class="trash" href="/riskadventure/eliminar/${ele.idEvento}"> Eliminar</a> </td>
+		            <td><a class="trash" href="/riskadventure/eliminareserva/${ele.idEvento}"> Eliminar</a> </td>
 	            </tr>
 	            
 	           </c:forEach>

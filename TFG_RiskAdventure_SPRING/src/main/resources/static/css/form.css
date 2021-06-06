@@ -38,11 +38,20 @@ button {
 	height: 50px;
 	border: none;
 	border-radius: 5px;
-	background-color: #3F4A56;
+	background-color: #8091a5;
 	color: white;
 	transition: 0.3s;
 }
 
 button:hover {
 	background-color: #ba9e38;
+}
+
+.fas fa-sign-out-alt {
+  margin-left: 7%;
+}
+.fas fa-sign-out-alt:hover {
+  cursor: pointer;
+  background-color: #ba9e38;
+  color: white;
 }

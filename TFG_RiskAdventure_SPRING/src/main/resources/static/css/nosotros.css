@@ -13,7 +13,7 @@ header {
   background-color: rgba(255, 255, 255, 0.98);
   top: 0;
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
 }
 
 
@@ -185,6 +185,7 @@ li:hover {
 	transition:all 600ms;
 }
 /*SOBRE NOSOTROS*/
+
 #sobre {
   background-image: linear-gradient(#ba9e38, #ba9e38);
   background-position: 0% 100%;
@@ -197,7 +198,7 @@ li:hover {
 }
 
 #textonosotros{
-	margin-top: -20px;
+
   margin: auto;
   text-align: center;
   color:#3F4A56;

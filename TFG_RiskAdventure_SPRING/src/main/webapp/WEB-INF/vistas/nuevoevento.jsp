@@ -17,6 +17,13 @@
 	
 <body>
 	<a class="navbar-brand" href="index"><img src="../imagenes/header_logo_peque2.png"/></a>
+		<div class="row" id="icon">
+              <div id="iconos" class="col-md-12 col-xs-12 ">
+				
+                <i class="fas fa-user-cog"></i>${usuario.username}
+                <a href="/riskadventure/logout"><i class="fas fa-sign-out-alt" id="logout" title="logout"></i></a>
+
+              </div>
 	<h1>PANEL ADMINISTRADOR</h1>
     <header>
         <a href="/riskadventure/admin"><i class="fas fa-arrow-left"></i> Volver</a>

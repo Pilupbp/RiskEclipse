@@ -13,7 +13,6 @@ z-index: 3;
 background-color: rgba(255, 255, 255, 0.98);
 top: 0;
 width: 100%;
-margin-bottom: 10%;
 }
 
 
@@ -234,7 +233,7 @@ font-size: 200%;
 margin: auto;
 text-align: justify;
 color:#3F4A56;
-margin-top: 1.5vw;
+
 font-size: 140%;
 }
 

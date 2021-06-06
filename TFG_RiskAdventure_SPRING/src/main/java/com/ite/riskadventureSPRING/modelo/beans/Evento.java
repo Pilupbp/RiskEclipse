@@ -241,14 +241,14 @@ public class Evento implements Serializable {
 
 	public Reserva addReserva(Reserva reserva) {
 		getReservas().add(reserva);
-		reserva.setEvento(this);
+		
 
 		return reserva;
 	}
 
 	public Reserva removeReserva(Reserva reserva) {
 		getReservas().remove(reserva);
-		reserva.setEvento(null);
+		
 
 		return reserva;
 	}

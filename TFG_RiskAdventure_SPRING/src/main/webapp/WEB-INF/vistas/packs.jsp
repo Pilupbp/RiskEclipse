@@ -31,8 +31,8 @@
         <header>
           <div class="row" id="icon">
               <div id="iconos" class="col-md-12 col-xs-12 ">
-                <a href="carrito"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
-                <a href="/riskadventure/formLogin"><i class="fas fa-user" id="login" title="login"></i></a>
+				<a href="indexReserva"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
+                <a href="/riskadventure/index"><i class="fas fa-user" id="login" title="login"></i>${usuario.username}</a>
                 <a href="/riskadventure/logout"><i class="fas fa-sign-out-alt" id="logout" title="logout"></i></a>
                 <i class="fas fa-search" id="buscar" title="buscar"></i>
               </div>
@@ -51,13 +51,13 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index"><img src="../imagenes/header_logo_peque2.png"/></a>
+                    <a class="navbar-brand" href="inicio"><img src="../imagenes/header_logo_peque2.png"/></a>
                   </div>
                   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
                   otro elemento que se pueda ocultar al minimizar la barra -->
                   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                      <li><a id="home" href="index">HOME</a></li>
+                      <li><a id="home" href="inicio">HOME</a></li>
                       <li class="dropdown">
 				        <a href="experiencias" class="dropdown-toggle" data-toggle="dropdown">
 				          EXPERIENCIAS<b class="caret"></b>

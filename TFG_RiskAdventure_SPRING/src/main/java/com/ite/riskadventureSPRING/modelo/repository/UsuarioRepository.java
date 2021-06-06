@@ -8,7 +8,7 @@ import com.ite.riskadventureSPRING.modelo.beans.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	
-	@Query("select u from Usuario u where u.username = ?1")
+	@Query("select u from Usuario u where u.username = ?1 ")
 	public Usuario findByUser(String username);
 
 }

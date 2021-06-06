@@ -87,9 +87,9 @@ public class Reserva implements Serializable {
 	public Evento getEvento() {
 		return this.evento;
 	}
-
 	public void setEvento(Evento evento) {
 		this.evento = evento;
 	}
+	
 
 }

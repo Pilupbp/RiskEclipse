@@ -28,8 +28,8 @@
         <header>
           <div class="row" id="icon">
               <div id="iconos" class="col-md-12 col-xs-12 ">
-                <a href="carrito"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
-                <a href="/riskadventure/formLogin"><i class="fas fa-user" id="login" title="login"></i></a>
+				<a href="indexReserva"><i class="fas fa-ticket-alt" id="carrito" title="reservas"></i></a>
+                <a href="/riskadventure/index"><i class="fas fa-user" id="login" title="login"></i>${usuario.username}</a>
                 <a href="/riskadventure/logout"><i class="fas fa-sign-out-alt" id="logout" title="logout"></i></a>
                 <i class="fas fa-search" id="buscar" title="buscar"></i>
               </div>
@@ -52,7 +52,7 @@
                   otro elemento que se pueda ocultar al minimizar la barra -->
                   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                      <li><a id="home" href="index">HOME</a></li>
+                      <li><a id="home" href="inicio">HOME</a></li>
                       <li class="dropdown">
 				        <a href="experiencias" class="dropdown-toggle" data-toggle="dropdown">
 				          EXPERIENCIAS<b class="caret"></b>
@@ -120,28 +120,39 @@
         </ul>
         <div id="cover-ctn-search">
         </div>
-                    <h1>¡Bienvenido/a ..............!</h1>
+
+                    <h1>¡Bienvenid@ ${usuario.username}!</h1>
+
+                    <h3>${insertarReserva}</h3>
                     
                     <h2>A continuaci&oacute;n, se muestran sus <b>reservas</b>:</h2>
 			        <c:choose>
-				        <c:when test="${listaTipoTierra!=null && listaTipoTierra.size()!=0}">
+				        <c:when test="${listaReservas!=null && listaReservas.size()!=0}">
 					        <table border="2">
-					        	<th>idTipo</th><th>Nombre</th>
-					        	<c:forEach var="ele" items="${listaTipoTierra }">
+					        	<th>Id Reserva</th>
+					        	<th>Id Evento</th>
+					        	<th>Username</th>
+					        	<th>Precio Venta</th>
+					        	<th>Observaciones</th>
+					        	<th>Cantidad</th>
+					        	<th>Eliminar</th>
+					        	<c:forEach var="ele" items="${listaReservas }">
 					        		<tr>
 					        			<td>${ele.idReserva}</td>
-					        			<td>${ele.idEvento}</td>
-					        			<td>${ele.idUsuario}</td>
+					        			<td>${ele.evento.idEvento}</td>
+					        			<td>${ele.usuario.username}</td>
 					        			<td>${ele.precioVenta}</td>
 					        			<td>${ele.observaciones}</td>
 					        			<td>${ele.cantidad}</td>
-					        		</tr>
-					        	</c:forEach>
-					        </table>
+					        			<td><a class="trash" href="/riskadventure/eliminareserva/${ele.idReserva}">Eliminar</a></td>
+					        		</tr>					        		
+					        	</c:forEach>					        	
+					        </table><br>
+					       <a href="tipoOferta"><div class="boton">VOLVER A OFERTAS</div></a>
 				        </c:when>
 				        <c:otherwise>
-				        	<h2>¡ No tienes reservas actualmente!</h2><br>
-				        	<a href="ofertas"><div class="boton">VOLVER A OFERTAS</div></a>
+				        	<h2>¡ No tiene reservas actualmente!</h2><br>
+				        	<a href="tipoOferta"><div class="boton">VOLVER A OFERTAS</div></a>
 				        </c:otherwise>
 			        </c:choose>
                     <br><br>
